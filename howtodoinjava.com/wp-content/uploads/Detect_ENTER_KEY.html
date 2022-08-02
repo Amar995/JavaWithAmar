@@ -1,0 +1,35 @@
+<html>
+	
+<!-- Mirrored from howtodoinjava.com/wp-content/uploads/Detect_ENTER_KEY.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Jul 2022 12:57:37 GMT -->
+<head>
+		<script type="text/javascript" src="../../../code.jquery.com/jquery-1.10.2.min.js"></script>
+	</head>
+	<body>
+		<h1>Detect ENTER key with jQuery</h1>
+		<label>TextBox Area: </label>
+		<input id="someTextBox" type="text" size="40" />
+		<script type="text/javascript">
+			//Bind keypress event to textbox
+			$('#someTextBox').keypress(function(event){
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if(keycode == '13'){
+					alert('You pressed a "enter" key in textbox');	
+				}
+				//Stop the event from propogation to other handlers
+				//If this line will be removed, then keypress event handler attached 
+				//at document level will also be triggered
+				event.stopPropagation();
+			});
+			
+			//Bind keypress event to document
+			$(document).keypress(function(event){
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if(keycode == '13'){
+					alert('You pressed a "enter" key in document');	
+				}
+			});
+		</script>
+	<script>(function(){var js = "window['__CF$cv$params']={r:'731dba354e4e2e33',m:'df2IGW5zJSc.j6afz2fHJ3MNNWwwBSunB8GsrlDsOjQ-1659012488-0-AXcfqA2mbyNCHH3M+vKYDw/fdr2Br4qnkFLeQdpAYQ/IrMsX3ZNnZk4svilEgeReO9p4xvv3wxAykJb0nqMXSCPYo2Qn3Pk7Q9+j4r/PT31eUzm7hWGjujLXWzfk+tzFdAeuKnEBrHPnp1PSlO5xAHOVsCePv8wONQ6TvgVwwT5w',s:[0x49428fbd0c,0x2d462abc57],u:'/cdn-cgi/challenge-platform/h/b'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../cdn-cgi/challenge-platform/h/b/scripts/alpha/invisible5615.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+<!-- Mirrored from howtodoinjava.com/wp-content/uploads/Detect_ENTER_KEY.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Jul 2022 12:57:38 GMT -->
+</html>

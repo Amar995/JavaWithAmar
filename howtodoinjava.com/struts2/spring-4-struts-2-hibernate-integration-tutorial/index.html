@@ -1,0 +1,1099 @@
+<!DOCTYPE html><html lang="en-US">
+<!-- Mirrored from howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Jul 2022 12:29:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><meta charset="UTF-8"><link rel="stylesheet" media="print" onload="this.onload=null;this.media='all';" id="ao_optimized_gfonts" href="https://fonts.googleapis.com/css?family=Raleway:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&amp;display=swap" /><link rel="profile" href="https://gmpg.org/xfn/11"><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /><meta name="viewport" content="width=device-width, initial-scale=1"><title>Spring 4 + Struts 2 + Hibernate Integration Tutorial - HowToDoInJava</title><meta name="description" content="In this tutorial, I am discussing all important points to keep in mind when integration spring framework with struts in conjunction with hibernate with other important factors." /><link rel="canonical" href="index.html" /><meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta property="og:title" content="Spring 4 + Struts 2 + Hibernate Integration Tutorial" /><meta property="og:description" content="In this tutorial, I am discussing all important points to keep in mind when integration spring framework with struts in conjunction with hibernate with other important factors." /><meta property="og:url" content="index.html" /><meta property="og:site_name" content="HowToDoInJava" /><meta property="article:publisher" content="http://www.facebook.com/HowToDoInJAVA" /><meta property="article:author" content="http://www.facebook.com/HowToDoInJAVA" /><meta property="article:published_time" content="2014-05-13T21:42:16+00:00" /><meta property="article:modified_time" content="2020-12-25T19:14:11+00:00" /><meta property="og:image" content="../../wp-content/uploads/2014/05/home-screen-for-spring-struts-hibernate-integration.png" /><meta property="og:image:width" content="568" /><meta property="og:image:height" content="356" /><meta property="og:image:type" content="image/png" /><meta name="author" content="Lokesh Gupta" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:creator" content="@HowToDoInJAVA" /><meta name="twitter:site" content="@HowToDoInJAVA" /> <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://howtodoinjava.com/#website","url":"https://howtodoinjava.com/","name":"HowToDoInJava","description":"Java Tutorials and Best Practices","publisher":{"@id":"https://howtodoinjava.com/#/schema/person/ca5727b449384205629b7299bb65486c"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://howtodoinjava.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/#primaryimage","url":"https://howtodoinjava.com/wp-content/uploads/2014/05/home-screen-for-spring-struts-hibernate-integration.png","contentUrl":"https://howtodoinjava.com/wp-content/uploads/2014/05/home-screen-for-spring-struts-hibernate-integration.png","width":568,"height":356,"caption":"home screen for spring struts hibernate integration"},{"@type":"WebPage","@id":"https://howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/","url":"https://howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/","name":"Spring 4 + Struts 2 + Hibernate Integration Tutorial - HowToDoInJava","isPartOf":{"@id":"https://howtodoinjava.com/#website"},"primaryImageOfPage":{"@id":"https://howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/#primaryimage"},"image":{"@id":"https://howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/#primaryimage"},"thumbnailUrl":"https://howtodoinjava.com/wp-content/uploads/2014/05/home-screen-for-spring-struts-hibernate-integration.png","datePublished":"2014-05-13T21:42:16+00:00","dateModified":"2020-12-25T19:14:11+00:00","description":"In this tutorial, I am discussing all important points to keep in mind when integration spring framework with struts in conjunction with hibernate with other important factors.","breadcrumb":{"@id":"https://howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/"]}]},{"@type":"BreadcrumbList","@id":"https://howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://howtodoinjava.com/"},{"@type":"ListItem","position":2,"name":"Struts 2","item":"https://howtodoinjava.com/struts2/"},{"@type":"ListItem","position":3,"name":"Spring 4 + Struts 2 + Hibernate Integration Tutorial"}]},{"@type":"Article","@id":"https://howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/#article","isPartOf":{"@id":"https://howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/"},"author":{"name":"Lokesh Gupta","@id":"https://howtodoinjava.com/#/schema/person/ca5727b449384205629b7299bb65486c"},"headline":"Spring 4 + Struts 2 + Hibernate Integration Tutorial","datePublished":"2014-05-13T21:42:16+00:00","dateModified":"2020-12-25T19:14:11+00:00","mainEntityOfPage":{"@id":"https://howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/"},"wordCount":4528,"commentCount":20,"publisher":{"@id":"https://howtodoinjava.com/#/schema/person/ca5727b449384205629b7299bb65486c"},"image":{"@id":"https://howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/#primaryimage"},"thumbnailUrl":"https://howtodoinjava.com/wp-content/uploads/2014/05/home-screen-for-spring-struts-hibernate-integration.png","keywords":["Hibernate Guides","Spring Basics","Struts 2"],"articleSection":["Struts 2"],"inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/#respond"]}]},{"@type":["Person","Organization"],"@id":"https://howtodoinjava.com/#/schema/person/ca5727b449384205629b7299bb65486c","name":"Lokesh Gupta","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://howtodoinjava.com/#/schema/person/image/","url":"https://howtodoinjava.com/wp-content/uploads/2021/11/howtodoinjava.jpg","contentUrl":"https://howtodoinjava.com/wp-content/uploads/2021/11/howtodoinjava.jpg","width":1860,"height":872,"caption":"Lokesh Gupta"},"logo":{"@id":"https://howtodoinjava.com/#/schema/person/image/"},"description":"A family guy with fun loving nature. Love computers, programming and solving everyday problems. Find me on Facebook and Twitter.","sameAs":["https://howtodoinjava.com/","http://www.facebook.com/HowToDoInJAVA","https://twitter.com/HowToDoInJAVA"],"url":"https://howtodoinjava.com/author/lokeshgupta1981/"}]}</script> <link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' /><link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min.css' media='all' /><style id='global-styles-inline-css'>body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--contrast: var(--contrast);--wp--preset--color--contrast-2: var(--contrast-2);--wp--preset--color--contrast-3: var(--contrast-3);--wp--preset--color--base: var(--base);--wp--preset--color--base-2: var(--base-2);--wp--preset--color--base-3: var(--base-3);--wp--preset--color--accent: var(--accent);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style><link rel='stylesheet' id='noticeboxesstyle-css'  href='../../wp-content/cache/autoptimize/css/autoptimize_single_d8ef8b02fe7691b25506fd20c70c13fb.css' media='all' /><link rel='stylesheet' id='wp-night-mode-css'  href='../../wp-content/cache/autoptimize/css/autoptimize_single_5aca0466d8ded60068c063018127c10b.css' media='all' /><link rel='stylesheet' id='helpful-css'  href='../../wp-content/cache/autoptimize/css/autoptimize_single_6f724d9ae7491cec3a06ab8159665439.css' media='all' /><link rel='stylesheet' id='generate-comments-css'  href='../../wp-content/themes/generatepress/assets/css/components/comments.min.css' media='all' /><link rel='stylesheet' id='generate-style-css'  href='../../wp-content/themes/generatepress/assets/css/main.min.css' media='all' /><style id='generate-style-inline-css'>@media (max-width:768px){}
+.is-right-sidebar{width:25%;}.is-left-sidebar{width:15%;}.site-content .content-area{width:75%;}@media (max-width: 900px){.main-navigation .menu-toggle,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav,.main-navigation:not(.slideout-navigation):not(.toggled) .main-nav > ul,.has-inline-mobile-toggle #site-navigation .inside-navigation > *:not(.navigation-search):not(.main-nav){display:none;}.nav-align-right .inside-navigation,.nav-align-center .inside-navigation{justify-content:space-between;}.has-inline-mobile-toggle .mobile-menu-control-wrapper{display:flex;flex-wrap:wrap;}.has-inline-mobile-toggle .inside-header{flex-direction:row;text-align:left;flex-wrap:wrap;}.has-inline-mobile-toggle .header-widget,.has-inline-mobile-toggle #site-navigation{flex-basis:100%;}.nav-float-left .has-inline-mobile-toggle #site-navigation{order:10;}}
+.dynamic-author-image-rounded{border-radius:100%;}.dynamic-featured-image, .dynamic-author-image{vertical-align:middle;}.one-container.blog .dynamic-content-template:not(:last-child), .one-container.archive .dynamic-content-template:not(:last-child){padding-bottom:0px;}.dynamic-entry-excerpt > p:last-child{margin-bottom:0px;}</style><link rel='stylesheet' id='newsletter-css'  href='../../wp-content/cache/autoptimize/css/autoptimize_single_e82f7c1bf34a75131708b4d9028fd6f1.css' media='all' /><style id='newsletter-inline-css'>.tnp-subscription {
+	margin: 0px;
+    max-width: none;
+    width: 70%;
+}
+.tnp-subscription label {
+	font-weight: normal;
+}
+.tnp-subscription input[type=email] {
+	border: 1px solid #dbdbdb;
+    background-color: inherit;
+}
+.tnp-profile {
+    padding: 20px;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.tnp-profile form .tnp-field input[type=text] {
+    width: 400px;
+}</style><link rel='stylesheet' id='generatepress-dynamic-css'  href='../../wp-content/uploads/generatepress/style.min.css' media='all' /><link rel='stylesheet' id='generate-child-css'  href='../../wp-content/cache/autoptimize/css/autoptimize_single_1c82d4939ca6ebbd0f0c8fb073859522.css' media='all' /><link rel='stylesheet' id='generate-navigation-branding-css'  href='../../wp-content/plugins/gp-premium/menu-plus/functions/css/navigation-branding-flex.min.css' media='all' /><style id='generate-navigation-branding-inline-css'>.main-navigation.has-branding .inside-navigation.grid-container, .main-navigation.has-branding.grid-container .inside-navigation:not(.grid-container){padding:0px 40px 0px 40px;}.main-navigation.has-branding:not(.grid-container) .inside-navigation:not(.grid-container) .navigation-branding{margin-left:10px;}.main-navigation .sticky-navigation-logo, .main-navigation.navigation-stick .site-logo:not(.mobile-header-logo){display:none;}.main-navigation.navigation-stick .sticky-navigation-logo{display:block;}.navigation-branding img, .site-logo.mobile-header-logo img{height:30px;width:auto;}.navigation-branding .main-title{line-height:30px;}@media (max-width: 900px){.main-navigation.has-branding.nav-align-center .menu-bar-items, .main-navigation.has-sticky-branding.navigation-stick.nav-align-center .menu-bar-items{margin-left:auto;}.navigation-branding{margin-right:auto;margin-left:10px;}.navigation-branding .main-title, .mobile-header-navigation .site-logo{margin-left:10px;}.main-navigation.has-branding .inside-navigation.grid-container{padding:0px;}.navigation-branding img, .site-logo.mobile-header-logo{height:60px;}.navigation-branding .main-title{line-height:60px;}}</style> <script src='../../wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script> <script defer src='../../wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script> <script id='wp-night-mode-js-extra'>var wpnmObject = {"button_html":"<div class=\"wpnm-button style-2\">\n                            <div class=\"wpnm-button-inner-left\"><\/div>\n                            <div class=\"wpnm-button-inner\"><\/div>\n                        <\/div>","default":"","server_time":"1658920245","turn_on_time":"","turn_off_time":""};</script> <script defer src='../../wp-content/cache/autoptimize/js/autoptimize_single_3d022dd98bdaf5ec22eaa0a2800a3c80.js' id='wp-night-mode-js'></script> <link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="alternate" type="application/json" href="../../wp-json/wp/v2/posts/3879.html" /><style type="text/css">.wp-night-mode-slider {
+				background-color: ;
+			}
+
+			.wp-night-mode-button.active .wp-night-mode-slider {
+				background-color: ;
+			}
+
+			body.wp-night-mode-on * {
+				background: ;
+			}
+
+			body.wp-night-mode-on .customize-partial-edit-shortcut button,
+			body.wp-night-mode-on .customize-partial-edit-shortcut button svg,
+			body.wp-night-mode-on #adminbarsearch,
+			body.wp-night-mode-on span.display-name,
+			body.wp-night-mode-on span.ab-icon,
+			body.wp-night-mode-on span.ab-label {
+			    background: transparent;
+			}
+
+			body.wp-night-mode-on * {
+				color: ;
+			}
+
+			body.wp-night-mode-on a {
+				color: #57b0ff;
+			}
+
+			body.wp-night-mode-on a:hover,
+			body.wp-night-mode-on a:visited,
+			body.wp-night-mode-on a:active {
+				color: #3498db;
+			}
+		}				@media (prefers-color-scheme: dark) {
+					 
+			.wp-night-mode-slider {
+				background-color: ;
+			}
+
+			.wp-night-mode-button.active .wp-night-mode-slider {
+				background-color: ;
+			}
+
+			body.wp-night-mode-on * {
+				background: ;
+			}
+
+			body.wp-night-mode-on .customize-partial-edit-shortcut button,
+			body.wp-night-mode-on .customize-partial-edit-shortcut button svg,
+			body.wp-night-mode-on #adminbarsearch,
+			body.wp-night-mode-on span.display-name,
+			body.wp-night-mode-on span.ab-icon,
+			body.wp-night-mode-on span.ab-label {
+			    background: transparent;
+			}
+
+			body.wp-night-mode-on * {
+				color: ;
+			}
+
+			body.wp-night-mode-on a {
+				color: #57b0ff;
+			}
+
+			body.wp-night-mode-on a:hover,
+			body.wp-night-mode-on a:visited,
+			body.wp-night-mode-on a:active {
+				color: #3498db;
+			}
+		}				}</style><link rel="pingback" href="../../xmlrpc.html"><style id="generateblocks-css">.gb-container .wp-block-image img{vertical-align:middle;}.gb-container .gb-shape{position:absolute;overflow:hidden;pointer-events:none;line-height:0;}.gb-container .gb-shape svg{fill:currentColor;}.gb-container-eae04a8a{font-size:17px;background-color:var(--contrast);position:relative;z-index:10;}.gb-container-eae04a8a > .gb-inside-container{padding:40px;max-width:1500px;margin-left:auto;margin-right:auto;z-index:10;position:relative;}.gb-container-316523a3{max-width:1500px;margin-left:auto;margin-right:auto;}.gb-container-316523a3 > .gb-inside-container{max-width:1500px;margin-left:auto;margin-right:auto;}.gb-container-78b2dd5f > .gb-inside-container{padding:0;}.gb-grid-wrapper > .gb-grid-column-78b2dd5f{width:25%;}.gb-container-df65bf0c > .gb-inside-container{padding:0;}.gb-grid-wrapper > .gb-grid-column-df65bf0c{width:30%;}.gb-container-f311805d > .gb-inside-container{padding:0;}.gb-grid-wrapper > .gb-grid-column-f311805d{width:20%;}.gb-container-284f4c2e > .gb-inside-container{padding:0;}.gb-grid-wrapper > .gb-grid-column-284f4c2e{width:25%;}.gb-container-457dd8fc{margin-top:20px;margin-bottom:60px;background-color:#f9f9f9;border-radius:5px;border-left-style: solid;border-left-width:0;}.gb-container-457dd8fc > .gb-inside-container{padding:40px;max-width:1500px;margin-left:auto;margin-right:auto;}.gb-container-bbc00baa > .gb-inside-container{padding:0;max-width:1500px;margin-left:auto;margin-right:auto;z-index:1;position:relative;}.gb-container-f276b5c1{text-align:left;}.gb-container-f276b5c1 > .gb-inside-container{padding:0;max-width:1500px;margin-left:auto;margin-right:auto;}.gb-container-f276b5c1.inline-post-meta-area > .gb-inside-container{display:flex;align-items:center;justify-content:flex-start;}.gb-grid-wrapper{display:flex;flex-wrap:wrap;}.gb-grid-wrapper > .gb-grid-column > .gb-container{display:flex;flex-direction:column;height:100%;}.gb-grid-column{box-sizing:border-box;}.gb-grid-wrapper .wp-block-image{margin-bottom:0;}.gb-grid-wrapper-318cf2fb{margin-left:-60px;}.gb-grid-wrapper-318cf2fb > .gb-grid-column{padding-left:60px;}.gb-icon{display:inline-flex;line-height:0;}.gb-icon svg{height:1em;width:1em;fill:currentColor;}.gb-highlight{background:none;color:unset;}p.gb-headline-85d96079{color:#f2f2f2;margin-top:20px;margin-bottom:0;}p.gb-headline-352bb617{color:#f2f2f2;margin-top:20px;margin-bottom:0;}h4.gb-headline-08dc97b8{color:#ffffff;}p.gb-headline-132d82a1{color:#ffffff;margin-bottom:18px;display:flex;align-items:center;}p.gb-headline-132d82a1 a{color:#ffffff;}p.gb-headline-132d82a1 a:hover{color:#30bced;}p.gb-headline-132d82a1 .gb-icon{color:#fcba04;padding-right:0.5em;}p.gb-headline-132d82a1 .gb-icon svg{width:1em;height:1em;}p.gb-headline-a96b558d{color:#ffffff;margin-bottom:18px;display:flex;align-items:center;}p.gb-headline-a96b558d a{color:#ffffff;}p.gb-headline-a96b558d a:hover{color:#30bced;}p.gb-headline-a96b558d .gb-icon{color:#fcba04;padding-right:0.5em;}p.gb-headline-a96b558d .gb-icon svg{width:1em;height:1em;}p.gb-headline-93b347de{color:#ffffff;margin-bottom:18px;display:flex;align-items:center;}p.gb-headline-93b347de a{color:#ffffff;}p.gb-headline-93b347de a:hover{color:#30bced;}p.gb-headline-93b347de .gb-icon{color:#fcba04;padding-right:0.5em;}p.gb-headline-93b347de .gb-icon svg{width:1em;height:1em;}p.gb-headline-f114d735{color:#ffffff;margin-bottom:18px;display:flex;align-items:center;}p.gb-headline-f114d735 a{color:#ffffff;}p.gb-headline-f114d735 a:hover{color:#30bced;}p.gb-headline-f114d735 .gb-icon{color:#fcba04;padding-right:0.5em;}p.gb-headline-f114d735 .gb-icon svg{width:1em;height:1em;}p.gb-headline-483ca863{color:#ffffff;margin-bottom:18px;display:flex;align-items:center;}p.gb-headline-483ca863 a{color:#ffffff;}p.gb-headline-483ca863 a:hover{color:#30bced;}p.gb-headline-483ca863 .gb-icon{color:#fcba04;padding-right:0.5em;}p.gb-headline-483ca863 .gb-icon svg{width:1em;height:1em;}p.gb-headline-fa4344d5{color:#ffffff;margin-bottom:18px;display:flex;align-items:center;}p.gb-headline-fa4344d5 a{color:#ffffff;}p.gb-headline-fa4344d5 a:hover{color:#30bced;}p.gb-headline-fa4344d5 .gb-icon{color:#fcba04;padding-right:0.5em;}p.gb-headline-fa4344d5 .gb-icon svg{width:1em;height:1em;}h4.gb-headline-6c239a9a{color:#ffffff;}p.gb-headline-58999d83{color:#ffffff;margin-bottom:18px;display:flex;align-items:center;}p.gb-headline-58999d83 a{color:#ffffff;}p.gb-headline-58999d83 a:hover{color:#30bced;}p.gb-headline-58999d83 .gb-icon{color:#fcba04;padding-right:0.5em;}p.gb-headline-58999d83 .gb-icon svg{width:1em;height:1em;}p.gb-headline-2cf41338{color:#ffffff;margin-bottom:18px;display:flex;align-items:center;}p.gb-headline-2cf41338 a{color:#ffffff;}p.gb-headline-2cf41338 a:hover{color:#30bced;}p.gb-headline-2cf41338 .gb-icon{color:#fcba04;padding-right:0.5em;}p.gb-headline-2cf41338 .gb-icon svg{width:1em;height:1em;}p.gb-headline-f25f67e7{color:#ffffff;margin-bottom:18px;display:flex;align-items:center;}p.gb-headline-f25f67e7 a{color:#ffffff;}p.gb-headline-f25f67e7 a:hover{color:#30bced;}p.gb-headline-f25f67e7 .gb-icon{color:#fcba04;padding-right:0.5em;}p.gb-headline-f25f67e7 .gb-icon svg{width:1em;height:1em;}p.gb-headline-41f14ec9{color:#ffffff;margin-bottom:18px;display:flex;align-items:center;}p.gb-headline-41f14ec9 a{color:#ffffff;}p.gb-headline-41f14ec9 a:hover{color:#30bced;}p.gb-headline-41f14ec9 .gb-icon{color:#fcba04;padding-right:0.5em;}p.gb-headline-41f14ec9 .gb-icon svg{width:1em;height:1em;}p.gb-headline-81526d85{color:#ffffff;margin-bottom:18px;display:flex;align-items:center;}p.gb-headline-81526d85 a{color:#ffffff;}p.gb-headline-81526d85 a:hover{color:#30bced;}p.gb-headline-81526d85 .gb-icon{color:#fcba04;padding-right:0.5em;}p.gb-headline-81526d85 .gb-icon svg{width:1em;height:1em;}p.gb-headline-e83392f1{color:#ffffff;margin-bottom:18px;display:flex;align-items:center;}p.gb-headline-e83392f1 a{color:#ffffff;}p.gb-headline-e83392f1 a:hover{color:#30bced;}p.gb-headline-e83392f1 .gb-icon{color:#fcba04;padding-right:0.5em;}p.gb-headline-e83392f1 .gb-icon svg{width:1em;height:1em;}h4.gb-headline-89ceafb7{color:#ffffff;}p.gb-headline-f4101a78{margin-top:20px;margin-bottom:0;display:flex;align-items:center;}p.gb-headline-f4101a78 a{color:#ffffff;}p.gb-headline-f4101a78 .gb-icon{padding-right:0.5em;}p.gb-headline-f4101a78 .gb-icon svg{width:1em;height:1em;}h1.gb-headline-7bdea7cd{text-align:left;font-weight:400;}div.gb-headline-95bfe7b9{text-align:center;color:var(--contrast-2);font-size:15px;padding:0;margin:0 20px 0 0;border-radius:0;border-style: solid;border-width:0;display:flex;justify-content:center;align-items:center;}div.gb-headline-95bfe7b9 .gb-icon{padding-right:0.5em;}div.gb-headline-95bfe7b9 .gb-icon svg{width:1em;height:1em;}div.gb-headline-13763911{text-align:center;color:var(--contrast-2);font-size:15px;padding:0;margin:0 20px 0 0;border-radius:0;border-style: solid;border-width:0;display:flex;justify-content:center;align-items:center;}div.gb-headline-13763911 a{color:var(--contrast-2);}div.gb-headline-13763911 a:hover{color:var(--contrast-2);}div.gb-headline-13763911 .gb-icon{padding-right:0.5em;}div.gb-headline-13763911 .gb-icon svg{width:1em;height:1em;}div.gb-headline-1e573021{text-align:center;color:var(--contrast-2);font-size:15px;margin-right:20px;margin-bottom:0;border-right-style: solid;border-right-width:0;display:flex;justify-content:center;align-items:center;}div.gb-headline-1e573021 a{color:var(--contrast-2);}div.gb-headline-1e573021 a:hover{color:var(--contrast-2);}div.gb-headline-1e573021 .gb-icon{padding-right:0.5em;}div.gb-headline-1e573021 .gb-icon svg{width:1em;height:1em;}div.gb-headline-c988a4c2{text-align:center;color:var(--contrast-2);font-size:15px;margin-right:20px;margin-bottom:0;border-right-style: solid;border-right-width:0;display:flex;justify-content:center;align-items:center;}div.gb-headline-c988a4c2 a{color:var(--contrast-2);}div.gb-headline-c988a4c2 a:hover{color:var(--contrast-2);}div.gb-headline-c988a4c2 .gb-icon{padding-right:0.5em;}div.gb-headline-c988a4c2 .gb-icon svg{width:1em;height:1em;}.gb-button-wrapper{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:flex-start;clear:both;}.gb-button-wrapper-217a1ef3{margin-top:40px;}.gb-button-wrapper .gb-button{display:inline-flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;transition:.2s background-color ease-in-out, .2s color ease-in-out, .2s border-color ease-in-out, .2s opacity ease-in-out, .2s box-shadow ease-in-out;}.gb-button-wrapper .gb-button .gb-icon{align-items:center;}.gb-button-wrapper a.gb-button-41a5f175,.gb-button-wrapper a.gb-button-41a5f175:visited{background-color:#fcba04;color:#1f2641;padding:10px;border-radius:100%;margin-right:20px;display:inline-flex;align-items:center;}.gb-button-wrapper a.gb-button-41a5f175:hover,.gb-button-wrapper a.gb-button-41a5f175:active,.gb-button-wrapper a.gb-button-41a5f175:focus{background-color:#30bced;color:#ffffff;}a.gb-button-41a5f175 .gb-icon{font-size:1em;}.gb-button-wrapper a.gb-button-8950af57,.gb-button-wrapper a.gb-button-8950af57:visited{background-color:#fcba04;color:#1f2641;padding:10px;border-radius:100%;margin-right:20px;display:inline-flex;align-items:center;}.gb-button-wrapper a.gb-button-8950af57:hover,.gb-button-wrapper a.gb-button-8950af57:active,.gb-button-wrapper a.gb-button-8950af57:focus{background-color:#30bced;color:#ffffff;}a.gb-button-8950af57 .gb-icon{font-size:1em;}.gb-button-wrapper a.gb-button-908c5463,.gb-button-wrapper a.gb-button-908c5463:visited{background-color:#fcba04;color:#1f2641;padding:10px;border-radius:100%;margin-right:10px;display:inline-flex;align-items:center;}.gb-button-wrapper a.gb-button-908c5463:hover,.gb-button-wrapper a.gb-button-908c5463:active,.gb-button-wrapper a.gb-button-908c5463:focus{background-color:#30bced;color:#ffffff;}a.gb-button-908c5463 .gb-icon{font-size:1em;}@media (min-width: 1025px) {.gb-grid-wrapper > div.gb-grid-column-78b2dd5f{padding-bottom:0;}.gb-grid-wrapper > div.gb-grid-column-df65bf0c{padding-bottom:0;}.gb-grid-wrapper > div.gb-grid-column-f311805d{padding-bottom:0;}.gb-grid-wrapper > div.gb-grid-column-284f4c2e{padding-bottom:0;}}@media (max-width: 1024px) {.gb-container-316523a3{border-top-left-radius:0;border-top-right-radius:0;}.gb-container-78b2dd5f{margin-bottom:50px;}.gb-grid-wrapper > .gb-grid-column-78b2dd5f{width:100%;}.gb-grid-wrapper > .gb-grid-column-df65bf0c{width:33.33%;}.gb-grid-wrapper > .gb-grid-column-f311805d{width:33.33%;}.gb-grid-wrapper > .gb-grid-column-284f4c2e{width:33.33%;}.gb-container-bbc00baa > .gb-inside-container{padding:0;}.gb-container-f276b5c1.inline-post-meta-area > .gb-inside-container{justify-content:flex-start;}}@media (max-width: 1024px) and (min-width: 768px) {.gb-grid-wrapper > div.gb-grid-column-df65bf0c{padding-bottom:0;}.gb-grid-wrapper > div.gb-grid-column-f311805d{padding-bottom:0;}.gb-grid-wrapper > div.gb-grid-column-284f4c2e{padding-bottom:0;}}@media (max-width: 767px) {.gb-container-316523a3 > .gb-inside-container{padding-right:30px;padding-left:30px;}.gb-grid-wrapper > .gb-grid-column-78b2dd5f{width:100%;}.gb-grid-wrapper > .gb-grid-column-df65bf0c{width:100%;}.gb-grid-wrapper > .gb-grid-column-f311805d{width:100%;}.gb-grid-wrapper > .gb-grid-column-284f4c2e{width:100%;}.gb-grid-wrapper > div.gb-grid-column-284f4c2e{padding-bottom:0;}.gb-container-457dd8fc > .gb-inside-container{padding-right:30px;padding-left:30px;}.gb-container-bbc00baa > .gb-inside-container{padding:0;}h4.gb-headline-08dc97b8{margin-bottom:30px;}h4.gb-headline-6c239a9a{margin-top:20px;margin-bottom:30px;}h4.gb-headline-89ceafb7{margin-top:20px;margin-bottom:30px;}div.gb-headline-95bfe7b9{font-size:14px;}div.gb-headline-13763911{font-size:14px;}div.gb-headline-1e573021{font-size:14px;}div.gb-headline-c988a4c2{font-size:14px;}.gb-button-wrapper a.gb-button-41a5f175{margin-right:20px;}.gb-button-wrapper a.gb-button-8950af57{margin-right:20px;}}</style><meta name="google-site-verification" content="EV_Uq1MFIe3lcKLlf4xhcabIz-68zGeWx8pjwQH3pB8" /><meta name="msvalidate.01" content="C71A4DAE3450D101003DA6DCE7D44ADE" /><link rel="icon" href="../../wp-content/uploads/2022/07/cropped-howtodoinjava-logo-small-e1657903941532-32x32.png" sizes="32x32" /><link rel="icon" href="../../wp-content/uploads/2022/07/cropped-howtodoinjava-logo-small-e1657903941532-192x192.png" sizes="192x192" /><link rel="apple-touch-icon" href="../../wp-content/uploads/2022/07/cropped-howtodoinjava-logo-small-e1657903941532-180x180.png" /><meta name="msapplication-TileImage" content="https://howtodoinjava.com/wp-content/uploads/2022/07/cropped-howtodoinjava-logo-small-e1657903941532-270x270.png" /><style id="wp-custom-css">/* GeneratePress Site CSS */ /** Primaru menu letter spacing **/
+.main-nav ul.menu li a {
+	letter-spacing: 0.08em;
+}
+
+/** Sticky navigation padding **/
+@media (min-width: 769px) {
+    .main-navigation.navigation-stick .inside-navigation {
+        padding: 10px 0;
+    }
+}
+
+/** Latest posts **/
+.wp-show-posts-entry-title a {
+	color: rgba(255,255,255,1);
+}
+
+.wp-show-posts-entry-title a:hover {
+	color: rgba(0,0,0,0.6);
+}
+
+.wp-show-posts-entry-summary p {
+	color: rgba(0,0,0,0.8);
+}
+
+.wp-show-posts-terms.wp-show-posts-meta a {
+	font-size: 15px;
+	color: rgba(255,255,255,1);
+}
+
+.wp-show-posts-terms.wp-show-posts-meta a:hover {
+	color: rgba(0,0,0,0.7);
+}
+
+/** Light box shadow **/
+.light-box-shadow {
+-webkit-box-shadow: 0px 0px 21px -4px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 0px 21px -4px rgba(0,0,0,0.2);
+box-shadow: 0px 0px 21px -4px rgba(0,0,0,0.2);
+}
+
+/* Category and author archives */
+.category .dynamic-content-template img.dynamic-featured-image,
+.author .dynamic-content-template img.dynamic-featured-image,
+.blog .dynamic-content-template img.dynamic-featured-image {
+	width: 100%;
+	height: 250px;
+  -o-object-fit: cover;
+	object-fit: cover;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+/* Buttons */
+.form-submit input[type="submit"],
+.ff-el-group.ff_submit_btn_wrapper button {
+	padding: 16px 34px;
+	font-weight: 600;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+/* Form error text color */
+.ff-el-input--content .error.text-danger {
+	color: #c73e1d;
+} /* End GeneratePress Site CSS */</style><style type="text/css">/* Multi-row tables */
+    @media (max-width: 769px) {
+
+        .mtr-table tbody,
+        .mtr-table {
+        	width: 100% !important;
+            display: table !important;
+        }
+
+        .mtr-table tr,
+        .mtr-table .mtr-th-tag,
+        .mtr-table .mtr-td-tag {
+        	display: block !important;
+            clear: both !important;
+            height: auto !important;
+        }
+
+        .mtr-table .mtr-td-tag,
+        .mtr-table .mtr-th-tag {
+        	text-align: right !important;
+            width: auto !important;
+            box-sizing: border-box !important;
+            overflow: auto !important;
+        }
+    
+            .mtr-table .mtr-cell-content {
+            	text-align: left !important;
+                width: 100%;
+                padding-left: 6px;
+                box-sizing: border-box;
+            }
+            
+        .mtr-table tbody,
+        .mtr-table tr,
+        .mtr-table {
+        	border: none !important;
+            padding: 0 !important;
+        }
+
+        .mtr-table .mtr-td-tag,
+        .mtr-table .mtr-th-tag {
+        	border: none;
+        }
+
+        .mtr-table tr:nth-child(even) .mtr-td-tag,
+        .mtr-table tr:nth-child(even) .mtr-th-tag {
+            border-bottom: 1px solid #dddddd !important;
+            border-left: 1px solid #dddddd !important;
+            border-right: 1px solid #dddddd !important;
+            border-top: none !important;
+        }
+
+        .mtr-table tr:nth-child(odd) .mtr-td-tag,
+        .mtr-table tr:nth-child(odd) .mtr-th-tag {
+            border-bottom: 1px solid #bbbbbb !important;
+            border-left: 1px solid #bbbbbb !important;
+            border-right: 1px solid #bbbbbb !important;
+            border-top: none !important;
+        }
+
+        .mtr-table tr:first-of-type td:first-of-type,
+        .mtr-table tr:first-of-type th:first-of-type {
+            border-top: 1px solid #bbbbbb !important;
+        }
+
+        .mtr-table.mtr-thead-td tr:nth-of-type(2) td:first-child,
+        .mtr-table.mtr-thead-td tr:nth-of-type(2) th:first-child,
+        .mtr-table.mtr-tr-th tr:nth-of-type(2) td:first-child,
+        .mtr-table.mtr-tr-th tr:nth-of-type(2) th:first-child,
+        .mtr-table.mtr-tr-td tr:nth-of-type(2) td:first-child,
+        .mtr-table.mtr-tr-td tr:nth-of-type(2) th:first-child {
+            border-top: 1px solid #dddddd !important;
+        }
+            .mtr-table tr:nth-child(even),
+            .mtr-table tr:nth-child(even) .mtr-td-tag,
+            .mtr-table tr:nth-child(even) .mtr-th-tag {
+                background: linear-gradient(90deg, transparent, transparent calc(100% / 3.4), #dddddd calc((100% / 3.4) + 1px), transparent calc((100% / 3.4) + 1px)) #ffffff !important;
+            }
+
+            .mtr-table tr:nth-child(odd),
+            .mtr-table tr:nth-child(odd) .mtr-td-tag,
+            .mtr-table tr:nth-child(odd) .mtr-th-tag {
+                background: linear-gradient(90deg, transparent, transparent calc(100% / 3.4), #bbbbbb calc((100% / 3.4) + 1px), transparent calc((100% / 3.4) + 1px))#dddddd !important;
+            }
+        .mtr-table .mtr-td-tag,
+        .mtr-table .mtr-td-tag:first-child,
+        .mtr-table .mtr-th-tag,
+        .mtr-table .mtr-th-tag:first-child {
+            padding: 5px 10px !important;
+        }
+        
+        .mtr-table td[data-mtr-content]:before,
+        .mtr-table th[data-mtr-content]:before {
+        	display: inline-block !important;
+        	content: attr(data-mtr-content) !important;
+        	float: left !important;
+            text-align: left !important;
+            white-space: pre-line !important;
+        }
+        
+        .mtr-table thead,
+        .mtr-table.mtr-tr-th tr:first-of-type,
+        .mtr-table.mtr-tr-td tr:first-of-type,
+        .mtr-table colgroup {
+        	display: none !important;
+        }
+    
+        .mtr-cell-content {
+            max-width: 69% !important;
+            display: inline-block !important;
+        }
+            
+        .mtr-table td[data-mtr-content]:before,
+        .mtr-table th[data-mtr-content]:before {
+            max-width: 29% !important;
+        }
+            
+    }
+    
+    /* Single-row tables */
+    @media (max-width: 769px) {
+
+        .mtr-one-row-table .mtr-td-tag,
+        .mtr-one-row-table .mtr-th-tag {
+            box-sizing: border-box !important;
+        }
+
+        .mtr-one-row-table colgroup {
+        	display: none !important;
+        }
+
+    
+        .mtr-one-row-table tbody,
+        .mtr-one-row-table tr,
+        .mtr-one-row-table {
+        	border: none !important;
+            padding: 0 !important;
+            width: 100% !important;
+            display: block;
+        }
+
+        .mtr-one-row-table .mtr-td-tag,
+        .mtr-one-row-table .mtr-th-tag {
+            border: none;
+        }
+        
+        .mtr-one-row-table .mtr-td-tag,
+        .mtr-one-row-table .mtr-th-tag {
+        	text-align: left !important;
+        }
+        
+        .mtr-one-row-table .mtr-td-tag,
+        .mtr-one-row-table .mtr-th-tag {
+        	display: block !important;
+            width: 50% !important;
+        }
+        .mtr-one-row-table tr {
+            display: flex !important;
+            flex-wrap: wrap !important;
+        }
+        
+            .mtr-one-row-table td:nth-child(4n+1),
+            .mtr-one-row-table th:nth-child(4n+1),
+            .mtr-one-row-table td:nth-child(4n+2),
+            .mtr-one-row-table th:nth-child(4n+2) {
+                background: #dddddd !important;
+            }
+
+            .mtr-one-row-table th:nth-child(2n+1),
+            .mtr-one-row-table td:nth-child(2n+1) {
+                border-right: 1px solid #bbbbbb !important;
+                border-left: 1px solid #bbbbbb !important;
+            }
+
+            .mtr-one-row-table td:nth-child(2n+2),
+            .mtr-one-row-table th:nth-child(2n+2) {
+                border-right: 1px solid #bbbbbb !important;
+            }
+
+            /* last two */
+            .mtr-one-row-table td:nth-last-child(-n+2),
+            .mtr-one-row-table th:nth-last-child(-n+2) {
+                border-bottom: 1px solid #bbbbbb !important;
+            }
+            
+        .mtr-one-row-table .mtr-td-tag,
+        .mtr-one-row-table .mtr-th-tag {
+            border-top: 1px solid #bbbbbb !important;
+            padding: 5px 10px !important;
+        }
+        
+    }</style></head><body class="post-template-default single single-post postid-3879 single-format-standard wp-custom-logo wp-embed-responsive post-image-above-header post-image-aligned-center sticky-menu-no-transition sticky-enabled desktop-sticky-menu right-sidebar nav-float-right one-container header-aligned-left dropdown-hover" itemtype="https://schema.org/Blog" itemscope> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a><header class="site-header has-inline-mobile-toggle" id="masthead" aria-label="Site"  itemtype="https://schema.org/WPHeader" itemscope><div class="inside-header grid-container"><div class="site-logo"> <a href="../../index.html" title="HowToDoInJava" rel="home"> <noscript><img  class="header-image is-logo-image" alt="HowToDoInJava" src="../../wp-content/uploads/2022/07/howtodoinjava-logo-new-e1657903724495.png" title="HowToDoInJava" width="350" height="70" /></noscript><img  class="lazyload header-image is-logo-image" alt="HowToDoInJava" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20350%2070%22%3E%3C/svg%3E' data-src="https://howtodoinjava.com/wp-content/uploads/2022/07/howtodoinjava-logo-new-e1657903724495.png" title="HowToDoInJava" width="350" height="70" /> </a></div><nav class="main-navigation mobile-menu-control-wrapper" id="mobile-menu-control-wrapper" aria-label="Mobile Toggle"> <button data-nav="site-navigation" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"> <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span><span class="screen-reader-text">Menu</span> </button></nav><nav class="has-sticky-branding main-navigation sub-menu-right" id="site-navigation" aria-label="Primary"  itemtype="https://schema.org/SiteNavigationElement" itemscope><div class="inside-navigation grid-container"><div class="navigation-branding"><div class="sticky-navigation-logo"> <a href="../../index.html" title="HowToDoInJava" rel="home"> <noscript><img src="../../wp-content/uploads/2022/07/logo-e1657905479735.png" class="is-logo-image" alt="HowToDoInJava" width="197" height="197" /></noscript><img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20197%20197%22%3E%3C/svg%3E' data-src="https://howtodoinjava.com/wp-content/uploads/2022/07/logo-e1657905479735.png" class="lazyload is-logo-image" alt="HowToDoInJava" width="197" height="197" /> </a></div></div> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"> <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span><span class="screen-reader-text">Menu</span> </button><div id="primary-menu" class="main-nav"><ul id="menu-category-menu" class=" menu sf-menu"><li id="menu-item-20268" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-20268"><a href="#">Java<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a><ul class="sub-menu"><li id="menu-item-19503" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19503"><a href="../../java/basics/java-tutorial/index.html">Java Tutorial</a></li><li id="menu-item-19464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19464"><a href="../../java-8-tutorial/index.html">Java 8</a></li><li id="menu-item-19804" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19804"><a href="../../series/java-arrays/index.html">Arrays</a></li><li id="menu-item-19461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19461"><a href="../../java-collections/index.html">Collections</a></li><li id="menu-item-19462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19462"><a href="../../java-concurrency-tutorial/index.html">Concurrency</a></li><li id="menu-item-19474" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19474"><a href="../../java/oops/object-oriented-programming/index.html">OOP</a></li><li id="menu-item-20901" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-20901"><a href="../../series/java-streams-guide/index.html">Streams</a></li><li id="menu-item-21375" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-21375"><a href="../../series/java-regex/index.html">Regex</a></li><li id="menu-item-19477" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19477"><a href="../../java-best-practices/index.html">Best Practices</a></li></ul></li><li id="menu-item-19467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19467"><a href="#">Spring<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a><ul class="sub-menu"><li id="menu-item-19472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19472"><a href="../../java-spring-framework-tutorials/index.html">Spring Core</a></li><li id="menu-item-19473" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19473"><a href="../../spring-5-tutorial/index.html">Spring 5</a></li><li id="menu-item-19469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19469"><a href="../../spring-aop-tutorial/index.html">Spring AOP</a></li><li id="menu-item-10224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10224"><a href="../../spring-boot-tutorials/index.html">Spring Boot</a></li><li id="menu-item-19471" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19471"><a href="../../spring5/hateoas/spring-hateoas-tutorial/index.html">Spring HATEOAS</a></li><li id="menu-item-19470" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19470"><a href="../../spring-webflux/spring-webflux-tutorial/index.html">Spring WebFlux</a></li></ul></li><li id="menu-item-19475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19475"><a href="#">Guides<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a><ul class="sub-menu"><li id="menu-item-19534" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19534"><a href="../../series/building-rest-apis/index.html">REST APIs</a></li><li id="menu-item-21330" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-21330"><a href="../../series/hibernate-tutorials/index.html">Hibernate</a></li><li id="menu-item-21361" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-21361"><a href="../../series/java-logging/index.html">Logging</a></li><li id="menu-item-19376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19376"><a href="../../junit-5-tutorial/index.html">JUnit 5</a></li><li id="menu-item-19476" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19476"><a href="../../gang-of-four-java-design-patterns/index.html">Design Patterns</a></li><li id="menu-item-19482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19482"><a href="../../python-tutorial/index.html">Python</a></li><li id="menu-item-19500" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19500"><a href="../../typescript/typescript-tutorial/index.html">TypeScript</a></li></ul></li><li id="menu-item-19484" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19484"><a href="#">Interview<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a><ul class="sub-menu"><li id="menu-item-19375" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19375"><a href="../../java-interview-questions/index.html">Preparation Guide</a></li><li id="menu-item-19488" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19488"><a href="../../interview-questions/core-java-interview-questions/index.html">Core Java</a></li><li id="menu-item-19487" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19487"><a href="../../interview-questions/top-spring-interview-questions-with-answers/index.html">Spring Core</a></li><li id="menu-item-19485" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19485"><a href="../../interview-questions/spring-boot-interview-questions/index.html">Spring Boot</a></li><li id="menu-item-19486" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19486"><a href="../../interview-questions/spring-mvc-interview-questions-with-answers/index.html">Spring WebMVC</a></li><li id="menu-item-19478" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19478"><a href="../../java-interview-puzzles-answers/index.html">Puzzles</a></li></ul></li><li id="menu-item-21874" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21874"><a href="../../work-with-me/index.html">Work with Me</a></li><li id="menu-item-17947" class="wp-night-mode menu-item menu-item-type-custom menu-item-object-custom menu-item-17947"><a href="#">Dark Mode</a></li></ul></div></div></nav></div></header><div class="pub-ad pub-ad-header"><div id="bsa-zone_1650615645925-3_123456"></div></div><div class="site grid-container container hfeed" id="page"><div class="site-content" id="content"><div class="content-area" id="primary"><main class="site-main" id="main"><article id="post-3879" class="post-3879 post type-post status-publish format-standard has-post-thumbnail hentry category-struts2 tag-hibernate-guides tag-spring-basics tag-struts-2" itemtype="https://schema.org/CreativeWork" itemscope><div class="inside-article"><header class="entry-header" aria-label="Content"><div class="gb-container gb-container-bbc00baa"><div class="gb-inside-container"><h1 class="gb-headline gb-headline-7bdea7cd gb-headline-text">Spring 4 + Struts 2 + Hibernate Integration Tutorial</h1><div class="gb-container gb-container-f276b5c1 inline-post-meta-area"><div class="gb-inside-container"><div class="gb-headline gb-headline-95bfe7b9"><span class="gb-icon"><svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path></svg></span><span class="gb-headline-text">Last Updated: <time class="entry-date updated-date" datetime="2020-12-26T00:44:11+05:30">December 26, 2020</time></span></div><div class="gb-headline gb-headline-13763911 "><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"></path></svg></span><span class="gb-headline-text">By: <a href="../../author/lokeshgupta1981/index.html">Lokesh Gupta</a></span></div><div class="gb-headline gb-headline-1e573021 dynamic-term-class"><span class="gb-icon"><svg height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 512 512"><path d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z"></path></svg></span><span class="gb-headline-text"><span class="post-term-item term-struts2"><a href="../index.html">Struts 2</a></span></span></div><div class="gb-headline gb-headline-c988a4c2 dynamic-term-class"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"></path></svg></span><span class="gb-headline-text"><span class="post-term-item term-hibernate-guides"><a href="../../tag/hibernate-guides/index.html">Hibernate Guides</a></span>, <span class="post-term-item term-spring-basics"><a href="../../tag/spring-basics/index.html">Spring Basics</a></span>, <span class="post-term-item term-struts-2"><a href="../../tag/struts-2/index.html">Struts 2</a></span></span></div></div></div></div></div></header><div class="entry-content" itemprop="text"><p>Previously, I have covered <strong><a href="../../spring5/webmvc/spring5-mvc-hibernate5-example/index.html" title="Spring 3 and hibernate integration tutorial with example">spring 3 + hibernate integration</a></strong> example and <strong><a href="../struts-2-hello-world-example-application/index.html" title="Struts 2 hello world example application">struts 2 hello world</a></strong> example. In this tutorial, I am discussing all important points to keep in mind when integration spring framework with struts in conjunction with hibernate. Also, please note that this tutorial uses other minor yet important concepts such as logging, use of TLDs and transactions as well integrated in this tutorial. So remember to check their details as well.</p><p>In this tutorial, I am building Employee management screen with simple capabilities like get all, add and delete. It will look like this:</p><p><noscript><img class="aligncenter  wp-image-3880" src="../../wp-content/uploads/2014/05/home-screen-for-spring-struts-hibernate-integration.png" alt="home screen for spring struts hibernate integration" width="408" height="256" srcset="https://howtodoinjava.com/wp-content/uploads/2014/05/home-screen-for-spring-struts-hibernate-integration.png 568w, https://howtodoinjava.com/wp-content/uploads/2014/05/home-screen-for-spring-struts-hibernate-integration-300x188.png 300w" sizes="(max-width: 408px) 100vw, 408px" /></noscript><img class="lazyload aligncenter  wp-image-3880" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20408%20256%22%3E%3C/svg%3E' data-src="//howtodoinjava.com/wp-content/uploads/2014/05/home-screen-for-spring-struts-hibernate-integration.png" alt="home screen for spring struts hibernate integration" width="408" height="256" data-srcset="https://howtodoinjava.com/wp-content/uploads/2014/05/home-screen-for-spring-struts-hibernate-integration.png 568w, https://howtodoinjava.com/wp-content/uploads/2014/05/home-screen-for-spring-struts-hibernate-integration-300x188.png 300w" data-sizes="(max-width: 408px) 100vw, 408px" /></p><p>I will discuss the integration process in following steps:</p><pre><a href="#Integration_Overview">1) Integration Overview </a>
+<a href="#Spring_Struts">2) Spring + Struts Integration</a>
+<a href="#Spring_Hibernate">3) Spring + Hibernate Integration</a>
+<a href="#Other_Integrated_Functionalities">4) Other Integrated Functionalities</a>
+    <a href="#Log4j">a) Log4j</a>
+    <a href="#TLDs">b) TLDs</a>
+    <a href="#Transactions">c) Transactions</a>
+<a href="#Important_Points">5) Important Points to Keep Remember</a>
+<a href="#Database_Schema_Used">6) Database Schema Used in Tutorial</a>
+<a href="#Download_Sourcecode">7) Download Sourcecode</a>
+</pre><p><a name="Integration_Overview"></a></p><h3>1) Integration Overview</h3><p>Before jumping into integration details, let&#8217;s identify <strong><em>why we need this integration</em></strong> in first place itself. Like Struts, Spring can also function as an MVC implementation. Both frameworks have their merits and drawbacks, still many will agree that <strong>Spring is much better</strong> and provides wider range of functionalities. For me there are only two scenarios, where you will need information given in this tutorial:</p><p><strong>i)</strong> You have a old application written in struts and want to use spring to enhance application&#8217;s capability many folds.<br /> <strong>ii)</strong> You really want to learn it for your own reasons.</p><p>Otherwise I am not ware of any good reason why somebody will choose struts over spring. If you know some other good reasons, please share with all of us. That will be great.</p><p>Moving on, in this tutorial I am <strong>delegating the Action management from Struts to Spring</strong>. The reason for this delegation is that, Action class when instantiated by spring context, can use all of the other features which spring provides to it&#8217;s Controller classes in it&#8217;s own MVC implementations. So you get all spring features as well as struts Action class to have controller logic including it&#8217;s ActionForm concept.</p><p><a name="Spring_Struts"></a></p><h3>2) Spring + Struts Integration</h3><p>This is core logic and starts from registering <code>ContextLoaderListener</code> and <code>StrutsPrepareAndExecuteFilter</code> in web.xml. <code>ContextLoaderListener</code> takes init parameter <em><strong>contextConfigLocation</strong></em> and is responsible for setup and start Spring <code>WebApplicationContext</code>. Now struts will take advantage of this context in spring related services specially in <a href="../../spring-core/spring-ioc-vs-di/index.html" title="Inversion of control (IoC) and dependency injection (DI) patterns in spring framework and related interview questions">dependency injection</a>.</p><p><code>StrutsPrepareAndExecuteFilter</code> look up <strong><em>struts.xml</em></strong> file in classpath and configure strut&#8217;s specific things like Action mappings, global forwards and other things defined in struts.xml file.</p><p><strong>web.xml</strong></p><pre class="brush: xml; title: ; notranslate" title="">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot;
+    xmlns:web=&quot;http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;
+    xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee https://www.oracle.com/java/technologies/; id=&quot;WebApp_ID&quot; version=&quot;2.5&quot;&gt;
+    
+  &lt;display-name&gt;Spring+Struts+Hibernate Integration Example&lt;/display-name&gt;
+  	&lt;welcome-file-list&gt;
+  		&lt;welcome-file&gt;/WEB-INF/index.jsp&lt;/welcome-file&gt;
+  	&lt;/welcome-file-list&gt;
+  	
+  	&lt;!-- Specify the spring context information location;
+  	Default location is applicationContext.xml file in classpath
+  	 --&gt;
+  	&lt;context-param&gt;
+		&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+		&lt;param-value&gt;classpath:beans.xml&lt;/param-value&gt;
+	&lt;/context-param&gt;
+	&lt;!-- Bootstrap listener to start up and shut down Spring's root WebApplicationContext. --&gt;
+  	&lt;listener&gt;  
+  		&lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;  
+	&lt;/listener&gt; 
+	&lt;!-- Handles both the preparation and execution phases of the Struts dispatching process. --&gt;
+	&lt;filter&gt;  
+		&lt;filter-name&gt;struts2&lt;/filter-name&gt;  
+		&lt;filter-class&gt;org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter&lt;/filter-class&gt;  
+		&lt;init-param&gt;
+			&lt;param-name&gt;debug&lt;/param-name&gt;
+			&lt;param-value&gt;0&lt;/param-value&gt;
+		&lt;/init-param&gt;
+		&lt;init-param&gt;
+			&lt;param-name&gt;detail&lt;/param-name&gt;
+			&lt;param-value&gt;0&lt;/param-value&gt;
+		&lt;/init-param&gt;
+	&lt;/filter&gt;  
+	&lt;filter-mapping&gt;  
+		&lt;filter-name&gt;struts2&lt;/filter-name&gt;  
+		&lt;url-pattern&gt;/*&lt;/url-pattern&gt;  
+	&lt;/filter-mapping&gt;  
+	&lt;!-- Struts Tag Library Descriptors --&gt;
+	&lt;jsp-config&gt;
+		&lt;taglib&gt;
+			&lt;taglib-uri&gt;/tags/struts-bean&lt;/taglib-uri&gt;
+			&lt;taglib-location&gt;/WEB-INF/struts-bean.tld&lt;/taglib-location&gt;
+		&lt;/taglib&gt;
+		&lt;taglib&gt;
+			&lt;taglib-uri&gt;/tags/struts-html&lt;/taglib-uri&gt;
+			&lt;taglib-location&gt;/WEB-INF/struts-html.tld&lt;/taglib-location&gt;
+		&lt;/taglib&gt;
+		&lt;taglib&gt;
+			&lt;taglib-uri&gt;/tags/struts-logic&lt;/taglib-uri&gt;
+			&lt;taglib-location&gt;/WEB-INF/struts-logic.tld&lt;/taglib-location&gt;
+		&lt;/taglib&gt;
+		&lt;taglib&gt;
+			&lt;taglib-uri&gt;/tags/struts-nested&lt;/taglib-uri&gt;
+			&lt;taglib-location&gt;/WEB-INF/struts-nested.tld&lt;/taglib-location&gt;
+		&lt;/taglib&gt;
+	&lt;/jsp-config&gt;
+&lt;/web-app&gt;
+</pre><p>In second step, you will have your action mappings in <strong>struts.xml</strong> file like this:</p><p><strong>struts.xml</strong></p><pre class="brush: xml; title: ; notranslate" title="">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;!DOCTYPE struts PUBLIC
+&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;
+&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;	
+
+&lt;struts&gt;
+    &lt;!-- devMode is helpful when you want some extra logs for debugging --&gt;
+    &lt;constant name=&quot;struts.devMode&quot; value=&quot;false&quot; /&gt;
+    &lt;!-- Global message resource; 
+    	 Otherwise you will have seperate message resource for each Action 
+    --&gt;
+    &lt;constant name=&quot;struts.custom.i18n.resources&quot; value=&quot;messages&quot; /&gt; 
+    &lt;!-- 
+    	This is important if you are planning to have slashes in Action URLs
+    	e.g. In this demo, employee is deleted using URL /delete/10
+    	This this is set to false; then struts will try to find mapping for 
+    	URL &quot;/10&quot; instaed of &quot;/delete/10&quot;
+     --&gt;
+    &lt;constant name=&quot;struts.enable.SlashesInActionNames&quot; value=&quot;true&quot;/&gt;
+     
+    &lt;!-- Normal Action mappings are defined here --&gt;
+	&lt;package name=&quot;default&quot; namespace=&quot;&quot; extends=&quot;struts-default&quot;&gt;
+	    &lt;!-- Two things to Notice: 
+	    	 1) class is set to 'editEmployeeAction' which is bean defined by Spring context
+	    	 2) We have given the method to be called here as well;
+	   	--&gt;
+		&lt;action name=&quot;list&quot; class=&quot;editEmployeeAction&quot; method=&quot;listEmployees&quot;&gt;
+			&lt;result&gt;/view/editEmployeeList.jsp&lt;/result&gt;
+		&lt;/action&gt;
+		&lt;action name=&quot;add&quot; class=&quot;editEmployeeAction&quot; method=&quot;addEmployee&quot;&gt;
+			&lt;result type=&quot;redirect&quot;&gt;/list&lt;/result&gt;
+		&lt;/action&gt;
+		&lt;action name=&quot;delete/*&quot; class=&quot;editEmployeeAction&quot; method=&quot;deleteEmployee&quot;&gt;
+		    &lt;param name=&quot;employee.id&quot;&gt;{1}&lt;/param&gt;
+			&lt;result type=&quot;redirect&quot;&gt;/list&lt;/result&gt;
+		&lt;/action&gt;
+		&lt;action name=&quot;*&quot; class=&quot;editEmployeeAction&quot; method=&quot;listEmployees&quot;&gt;
+		  &lt;result&gt;/view/editEmployeeList.jsp&lt;/result&gt;
+		&lt;/action&gt; 
+	&lt;/package&gt;
+	
+&lt;/struts&gt;
+</pre><div class="noticeboxesde bluenoticebox">In strut&#8217;s alone application we would have full Action Class with it&#8217;s package information in &#8220;class&#8221; attribute. Here we have given the class name as editEmployeeAction. Where is it defined? We will ask Spring to lookup for us.</div><p>Spring context file <strong>beans.xml</strong> is typical spring alone context file having all required thing for a web application to work, INCLUDING a bean definition <code>editEmployeeAction</code> which struts is looking for.</p><p><strong>beans.xml</strong></p><pre class="brush: xml; title: ; notranslate" title="">
+&lt;?xml  version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+    xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+    xmlns:jee=&quot;http://www.springframework.org/schema/jee&quot;
+    xmlns:lang=&quot;http://www.springframework.org/schema/lang&quot;
+    xmlns:p=&quot;http://www.springframework.org/schema/p&quot;
+    xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;
+    xmlns:util=&quot;http://www.springframework.org/schema/util&quot;
+    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop/ http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context/ http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/jee/ http://www.springframework.org/schema/jee/spring-jee.xsd
+        http://www.springframework.org/schema/lang/ http://www.springframework.org/schema/lang/spring-lang.xsd
+        http://www.springframework.org/schema/tx/ http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/util/ http://www.springframework.org/schema/util/spring-util.xsd&quot;&gt;
+    
+    &lt;!-- This bean has been referred fron struts.xml file; So type it correctly; --&gt;
+    &lt;!-- Make scope prototype; This is really important. --&gt;
+    &lt;bean name=&quot;editEmployeeAction&quot; class=&quot;com.howtodoinjava.controller.EditEmployeeAction&quot; scope=&quot;prototype&quot;&gt;
+	     &lt;property name=&quot;employeeManager&quot;&gt;
+	        &lt;ref bean=&quot;employeeManager&quot;/&gt;
+	     &lt;/property&gt;
+    &lt;/bean&gt;
+    
+    &lt;!-- These beans are injected automatically by spring context --&gt;
+    &lt;bean id=&quot;employeeDAO&quot; class=&quot;com.howtodoinjava.dao.EmployeeDaoImpl&quot;&gt;
+        &lt;property name=&quot;sessionFactory&quot; ref=&quot;sessionFactory&quot;/&gt;
+    &lt;/bean&gt;
+    
+    &lt;bean id=&quot;employeeManager&quot; class=&quot;com.howtodoinjava.service.EmployeeManagerImpl&quot;&gt;
+        &lt;property name=&quot;employeeDAO&quot; ref=&quot;employeeDAO&quot;/&gt;
+    &lt;/bean&gt;
+    
+    &lt;!-- Configure jdbc.properties --&gt;
+    &lt;bean id=&quot;propertyConfigurer&quot;
+        class=&quot;org.springframework.beans.factory.config.PropertyPlaceholderConfigurer&quot;
+        p:location=&quot;/WEB-INF/jdbc.properties&quot; /&gt;
+ 
+    &lt;!-- Data Source configuration --&gt;
+    &lt;bean id=&quot;dataSource&quot;
+        class=&quot;org.apache.commons.dbcp.BasicDataSource&quot; destroy-method=&quot;close&quot;
+        p:driverClassName=&quot;${jdbc.driverClassName}&quot;
+        p:url=&quot;${jdbc.databaseurl}&quot; p:username=&quot;${jdbc.username}&quot;
+        p:password=&quot;${jdbc.password}&quot; /&gt;
+ 
+	&lt;!-- Configure hibernate session factory --&gt;    
+    &lt;bean id=&quot;sessionFactory&quot;
+        class=&quot;org.springframework.orm.hibernate3.LocalSessionFactoryBean&quot;&gt;
+        &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;
+        &lt;property name=&quot;configLocation&quot;&gt;
+            &lt;value&gt;classpath:hibernate.cfg.xml&lt;/value&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;configurationClass&quot;&gt;
+            &lt;value&gt;org.hibernate.cfg.AnnotationConfiguration&lt;/value&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;hibernateProperties&quot;&gt;
+            &lt;props&gt;
+                &lt;prop key=&quot;hibernate.dialect&quot;&gt;${jdbc.dialect}&lt;/prop&gt;
+                &lt;prop key=&quot;hibernate.show_sql&quot;&gt;true&lt;/prop&gt;
+            &lt;/props&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+    &lt;!-- Run SQL queries in transactions --&gt;
+    &lt;tx:annotation-driven /&gt;
+    &lt;bean id=&quot;transactionManager&quot;
+        class=&quot;org.springframework.orm.hibernate3.HibernateTransactionManager&quot;&gt;
+        &lt;property name=&quot;sessionFactory&quot; ref=&quot;sessionFactory&quot; /&gt;
+    &lt;/bean&gt;
+    
+&lt;/beans&gt;
+</pre><p>This is all we need to do to <strong>integrate struts with spring</strong> framework. Now you action class look like this:</p><p><strong>EditEmployeeAction.java</strong></p><pre class="brush: java; title: ; notranslate" title="">
+package com.howtodoinjava.controller;
+
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import com.howtodoinjava.entity.EmployeeEntity;
+import com.howtodoinjava.service.EmployeeManager;
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.Preparable;
+
+public class EditEmployeeAction extends ActionSupport implements Preparable	
+{
+	private static final long serialVersionUID = 1L;
+	
+	//Logger configured using log4j
+	private static final Logger logger = Logger.getLogger(EditEmployeeAction.class);
+	
+	//List of employees; Setter and Getter are below
+	private List&lt;EmployeeEntity&gt; employees;
+	
+	//Employee object to be added; Setter and Getter are below
+	private EmployeeEntity employee;
+	
+	//Employee manager injected by spring context; This is cool !!
+	private EmployeeManager employeeManager;
+
+	//This method return list of employees in database
+	public String listEmployees() {
+		logger.info(&quot;listEmployees method called&quot;);
+		employees = employeeManager.getAllEmployees();
+		return SUCCESS;
+	}
+
+	//This method will be called when a employee object is added
+	public String addEmployee() {
+		logger.info(&quot;addEmployee method called&quot;);
+		employeeManager.addEmployee(employee);
+		return SUCCESS;
+	}
+
+	//Deletes a employee by it's id passed in path parameter
+	public String deleteEmployee() {
+		logger.info(&quot;deleteEmployee method called&quot;);
+		employeeManager.deleteEmployee(employee.getId());
+		return SUCCESS;
+	}
+	
+	//This method will be called before any of Action method is invoked;
+	//So some pre-processing if required.
+	@Override
+	public void prepare() throws Exception {
+		employee = null;
+	}
+
+	//Getters and Setters hidden
+}
+</pre><p>Spring also inject the DAO references to Manager class.</p><p><strong>EmployeeManagerImpl.java</strong></p><pre class="brush: java; title: ; notranslate" title="">
+package com.howtodoinjava.service;
+
+import java.util.List;
+
+import org.springframework.transaction.annotation.Transactional;
+
+import com.howtodoinjava.dao.EmployeeDAO;
+import com.howtodoinjava.entity.EmployeeEntity;
+
+public class EmployeeManagerImpl implements EmployeeManager 
+{
+	//Employee dao injected by Spring context
+    private EmployeeDAO employeeDAO;
+	
+	//This method will be called when a employee object is added
+	@Override
+	@Transactional
+	public void addEmployee(EmployeeEntity employee) {
+		employeeDAO.addEmployee(employee);
+	}
+	
+	//This method return list of employees in database
+	@Override
+	@Transactional
+	public List&lt;EmployeeEntity&gt; getAllEmployees() {
+		return employeeDAO.getAllEmployees();
+	}
+	//Deletes a employee by it's id
+	@Override
+	@Transactional
+	public void deleteEmployee(Integer employeeId) {
+		employeeDAO.deleteEmployee(employeeId);
+	}
+	
+	//This setter will be used by Spring context to inject the dao's instance
+	public void setEmployeeDAO(EmployeeDAO employeeDAO) {
+		this.employeeDAO = employeeDAO;
+	}
+}
+</pre><p><a name="Spring_Hibernate"></a></p><h3>3) Spring + Hibernate Integration</h3><p>Now we have to integrate hibernate into application. Best place is to integrate using Spring&#8217;s extensive capabilities to work with different ORMs using excellent use of dependency injection.</p><p>Required hibernate dependencies for spring have already been given in above <strong>beans.xml</strong> file. Other files you will need are:</p><p><strong>hibernate.cfg.xml</strong></p><pre class="brush: xml; title: ; notranslate" title="">
+&lt;?xml version='1.0' encoding='utf-8'?&gt;
+&lt;!DOCTYPE hibernate-configuration PUBLIC
+    &quot;-//Hibernate/Hibernate Configuration DTD//EN&quot;
+    &quot;http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd&quot;&gt;
+ 
+&lt;hibernate-configuration&gt;
+    &lt;session-factory&gt;
+        &lt;mapping class=&quot;com.howtodoinjava.entity.EmployeeEntity&quot; /&gt;
+    &lt;/session-factory&gt;
+&lt;/hibernate-configuration&gt;
+</pre><p><strong>jdbc.properties</strong></p><pre class="brush: java; title: ; notranslate" title="">
+jdbc.driverClassName=com.mysql.jdbc.Driver
+jdbc.dialect=org.hibernate.dialect.MySQLDialect
+jdbc.databaseurl=jdbc:mysql://127.0.0.1:3306/test
+jdbc.username=root
+jdbc.password=password
+</pre><p><strong>EmployeeDaoImpl.java</strong></p><pre class="brush: java; title: ; notranslate" title="">
+package com.howtodoinjava.dao;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Repository;
+
+import com.howtodoinjava.entity.EmployeeEntity;
+
+@Repository
+public class EmployeeDaoImpl implements EmployeeDAO  
+{
+	//Session factory injected by spring context
+    private SessionFactory sessionFactory;
+	
+    //This method will be called when a employee object is added
+	@Override
+	public void addEmployee(EmployeeEntity employee) {
+		this.sessionFactory.getCurrentSession().save(employee);
+	}
+
+	//This method return list of employees in database
+	@SuppressWarnings(&quot;unchecked&quot;)
+	@Override
+	public List&lt;EmployeeEntity&gt; getAllEmployees() {
+		return this.sessionFactory.getCurrentSession().createQuery(&quot;from EmployeeEntity&quot;).list();
+	}
+
+	//Deletes a employee by it's id
+	@Override
+	public void deleteEmployee(Integer employeeId) {
+		EmployeeEntity employee = (EmployeeEntity) sessionFactory.getCurrentSession()
+										.load(EmployeeEntity.class, employeeId);
+        if (null != employee) {
+        	this.sessionFactory.getCurrentSession().delete(employee);
+        }
+	}
+
+	//This setter will be used by Spring context to inject the sessionFactory instance
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+}
+</pre><p>For your reference, the EmployeeEntity class looks like this:</p><p><strong>EmployeeEntity.java</strong></p><pre class="brush: java; title: ; notranslate" title="">
+package com.howtodoinjava.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name=&quot;EMPLOYEE&quot;)
+public class EmployeeEntity {
+     
+    @Id
+    @Column(name=&quot;ID&quot;)
+    @GeneratedValue
+    private Integer id;
+     
+    @Column(name=&quot;FIRSTNAME&quot;)
+    private String firstname;
+ 
+    @Column(name=&quot;LASTNAME&quot;)
+    private String lastname;
+ 
+    @Column(name=&quot;EMAIL&quot;)
+    private String email;
+     
+    @Column(name=&quot;TELEPHONE&quot;)
+    private String telephone;
+     
+    //Setters and Getters
+}
+</pre><p><a name="Other_Integrated_Functionalities"></a></p><h3>4) Other Integrated Functionalities</h3><p>Apart from struts + spring + hibernate we have used following components to build the application.</p><p><a name="Log4j"></a></p><h4>a) Log4j</h4><p>Spring configure logging automatically by scanning <code>log4j</code> in classpath. We have added the log4j dependency using <code>pom.xml</code> file. Now all you have to place a log4j.xml or log4j.properties file in classpath.</p><p><strong>log4j.properties</strong></p><pre class="brush: java; title: ; notranslate" title="">
+log4j.rootLogger=info, stdout, R
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L - %m%n
+
+log4j.appender.R=org.apache.log4j.RollingFileAppender
+log4j.appender.R.File=c:/log/demo.log
+log4j.appender.R.MaxFileSize=100KB
+log4j.appender.R.MaxBackupIndex=1
+log4j.appender.R.layout=org.apache.log4j.PatternLayout
+log4j.appender.R.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L - %m%n
+</pre><p><a name="TLDs"></a></p><h4>b) TLDs</h4><p>If you look at <code>web.xml</code> file, the we have included some TLDs in there. We can use them anytime in view layer like this:</p><p><strong>editEmployeeList.jsp</strong></p><pre class="brush: java; title: ; notranslate" title="">
+&lt;%@ taglib prefix=&quot;s&quot; uri=&quot;/struts-tags&quot;%&gt; 
+&lt;%@taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Spring-4 + Struts-3 + Hibernate Integration Demo&lt;/title&gt;
+    &lt;style&gt;
+	table.list
+	{
+		border-collapse:collapse;
+		width: 40%;
+	}
+	table.list, table.list td, table.list th
+	{
+		border:1px solid gray;
+		padding: 5px;
+	}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;h2&gt;Spring-4 + Struts-3 + Hibernate Integration Demo&lt;/h2&gt;
+ 
+&lt;s:form method=&quot;post&quot; action=&quot;add&quot;&gt;
+    &lt;table&gt;
+	    &lt;tr&gt;
+	        &lt;td&gt;&lt;s:textfield key=&quot;label.firstname&quot; name=&quot;employee.firstname&quot;/&gt;&lt;/td&gt; 
+	    &lt;/tr&gt;
+	    &lt;tr&gt;
+	        &lt;td&gt;&lt;s:textfield key=&quot;label.lastname&quot; name=&quot;employee.lastname&quot;/&gt;&lt;/td&gt;
+	    &lt;/tr&gt;
+	    &lt;tr&gt;
+	        &lt;td&gt;&lt;s:textfield key=&quot;label.email&quot; name=&quot;employee.email&quot;/&gt;&lt;/td&gt;
+	    &lt;/tr&gt;
+	    &lt;tr&gt;
+	        &lt;td&gt;&lt;s:textfield key=&quot;label.telephone&quot; name=&quot;employee.telephone&quot;/&gt;&lt;/td&gt;
+	    &lt;/tr&gt;
+	    &lt;tr&gt;
+	        &lt;td&gt;
+	        	&lt;s:submit key=&quot;label.add&quot;&gt;&lt;/s:submit&gt;
+	        &lt;/td&gt;
+	    &lt;/tr&gt;
+	&lt;/table&gt; 
+&lt;/s:form&gt;
+ 
+     
+&lt;h3&gt;Employees&lt;/h3&gt;
+&lt;c:if  test=&quot;${!empty employees}&quot;&gt;
+	&lt;table class=&quot;list&quot;&gt;
+		&lt;tr&gt;
+		    &lt;th align=&quot;left&quot;&gt;Name&lt;/th&gt;
+		    &lt;th align=&quot;left&quot;&gt;Email&lt;/th&gt;
+		    &lt;th align=&quot;left&quot;&gt;Telephone&lt;/th&gt;
+		    &lt;th align=&quot;left&quot;&gt;Actions&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;c:forEach items=&quot;${employees}&quot; var=&quot;emp&quot;&gt;
+		    &lt;tr&gt;
+		        &lt;td&gt;${emp.lastname}, ${emp.firstname} &lt;/td&gt;
+		        &lt;td&gt;${emp.email}&lt;/td&gt;
+		        &lt;td&gt;${emp.telephone}&lt;/td&gt;
+		        &lt;td&gt;&lt;a href=&quot;delete/${emp.id}&quot;&gt;delete&lt;/a&gt;&lt;/td&gt;
+		    &lt;/tr&gt;
+		&lt;/c:forEach&gt;
+	&lt;/table&gt;
+&lt;/c:if&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><p><a name="Transactions"></a></p><h4>c) Transactions</h4><p>EmployeeManagerImpl.java uses annotation @Transactional in method such as getAllEmployees() and deleteEmployee(). This essentially run all the database queries executed under this method in single transaction. You declared transaction dependencies in <code>beans.xml</code> context file like this.</p><pre class="brush: xml; title: ; notranslate" title="">
+&lt;!-- Run SQL queries in transactions --&gt;
+&lt;tx:annotation-driven /&gt;
+
+&lt;bean id=&quot;transactionManager&quot;
+	class=&quot;org.springframework.orm.hibernate3.HibernateTransactionManager&quot;&gt;
+	&lt;property name=&quot;sessionFactory&quot; ref=&quot;sessionFactory&quot; /&gt;
+&lt;/bean&gt;
+</pre><p><a name="Important_Points"></a></p><h3>5) Important Points to Keep Remember</h3><p><strong>a)</strong> <strong>Add the jar files from project dependencies into project deployment assembly</strong> if runtime is unable to find classes present in lib folder.</p><p><strong>b)</strong> Make <strong>scope of Action class defined in bean.xml as &#8220;prototype&#8221;</strong>. Default scope of Spring&#8217;s provided beans are singleton and struts Action class must be created new for each request because it contain user session specific data. To accommodate both, mark Action class bean as prototype.<br /> <strong><br /> c)</strong> Do not forget to <strong>setup the database</strong> before running this application. It will cause you several exceptions if not setup correctly.</p><p><strong>d)</strong> Also, please <strong>include</strong> <code>struts2-spring-plugin</code> as well in project runtime dependencies.</p><p><a name="Database_Schema_Used"></a></p><h3>6) Database Schema Used in Tutorial</h3><p>Following table has been created in MySQL in database named &#8220;test&#8221;.</p><pre class="brush: sql; title: ; notranslate" title="">
+CREATE TABLE EMPLOYEE
+(
+    ID          INT PRIMARY KEY AUTO_INCREMENT,
+    FIRSTNAME   VARCHAR(30),
+    LASTNAME    VARCHAR(30),
+    TELEPHONE   VARCHAR(15),
+    EMAIL       VARCHAR(30),
+    CREATED     TIMESTAMP DEFAULT NOW()
+);
+</pre><p>If you are planning to build the application yourself then below given <strong>directly structure</strong> used in this application will help you.</p><figure id="attachment_3881" aria-describedby="caption-attachment-3881" style="width: 459px" class="wp-caption aligncenter"><noscript><img src="../../wp-content/uploads/2014/05/directory-structure-for-spring-struts-hibernate-integration.png" alt="directory structure for spring struts hibernate integration" width="469" height="728" class="size-full wp-image-3881" srcset="https://howtodoinjava.com/wp-content/uploads/2014/05/directory-structure-for-spring-struts-hibernate-integration.png 469w, https://howtodoinjava.com/wp-content/uploads/2014/05/directory-structure-for-spring-struts-hibernate-integration-193x300.png 193w" sizes="(max-width: 469px) 100vw, 469px" /></noscript><img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20469%20728%22%3E%3C/svg%3E' data-src="//howtodoinjava.com/wp-content/uploads/2014/05/directory-structure-for-spring-struts-hibernate-integration.png" alt="directory structure for spring struts hibernate integration" width="469" height="728" class="lazyload size-full wp-image-3881" data-srcset="https://howtodoinjava.com/wp-content/uploads/2014/05/directory-structure-for-spring-struts-hibernate-integration.png 469w, https://howtodoinjava.com/wp-content/uploads/2014/05/directory-structure-for-spring-struts-hibernate-integration-193x300.png 193w" data-sizes="(max-width: 469px) 100vw, 469px" /><figcaption id="caption-attachment-3881" class="wp-caption-text">Directory structure for spring struts hibernate integration</figcaption></figure><p>And the <code>pom.xml</code> file used in this project having all project dependencies (some extra) is as below:</p><p><strong>pom.xml</strong></p><pre class="brush: xml; title: ; notranslate" title="">
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;com.howtodoinjava.app&lt;/groupId&gt;
+  &lt;artifactId&gt;Spring4Struts2HibernateIntegration&lt;/artifactId&gt;
+  &lt;packaging&gt;war&lt;/packaging&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+  &lt;name&gt;Spring4Struts2HibernateIntegration Maven Webapp&lt;/name&gt;
+  &lt;url&gt;http://maven.apache.org&lt;/url&gt;
+  &lt;!-- JBoss repository for Hibernate --&gt;
+  &lt;repositories&gt;
+	&lt;repository&gt;
+		&lt;id&gt;JBoss repository&lt;/id&gt;
+		&lt;url&gt;http://repository.jboss.org/nexus/content/groups/public/&lt;/url&gt;
+	&lt;/repository&gt;
+  &lt;/repositories&gt;
+  &lt;properties&gt;
+    &lt;org.springframework.version&gt;4.0.3.RELEASE&lt;/org.springframework.version&gt;
+  &lt;/properties&gt;
+  &lt;dependencies&gt;
+    
+	&lt;dependency&gt;
+      &lt;groupId&gt;junit&lt;/groupId&gt;
+      &lt;artifactId&gt;junit&lt;/artifactId&gt;
+      &lt;version&gt;4.11&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+	
+	&lt;dependency&gt;
+		&lt;groupId&gt;org.apache.struts&lt;/groupId&gt;
+		&lt;artifactId&gt;struts2-core&lt;/artifactId&gt;
+		&lt;version&gt;2.3.16.2&lt;/version&gt;
+	&lt;/dependency&gt;
+	
+   &lt;dependency&gt;
+		&lt;groupId&gt;org.apache.struts&lt;/groupId&gt;
+		&lt;artifactId&gt;struts2-spring-plugin&lt;/artifactId&gt;
+		&lt;version&gt;2.3.16.2&lt;/version&gt;
+	&lt;/dependency&gt;
+	
+     &lt;!--
+	    Core utilities used by other modules.
+	    Define this if you use Spring Utility APIs (org.springframework.core.*/org.springframework.util.*)
+	--&gt;
+	&lt;dependency&gt;
+	  &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+	  &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+	  &lt;version&gt;${org.springframework.version}&lt;/version&gt;
+	  &lt;scope&gt;runtime&lt;/scope&gt;
+	&lt;/dependency&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
+		&lt;version&gt;${org.springframework.version}&lt;/version&gt;
+		&lt;scope&gt;runtime&lt;/scope&gt;
+	&lt;/dependency&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+		&lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;
+		&lt;version&gt;${org.springframework.version}&lt;/version&gt;
+		&lt;scope&gt;runtime&lt;/scope&gt;
+	&lt;/dependency&gt;
+            
+	&lt;!--
+	    Bean Factory and JavaBeans utilities (depends on spring-core)
+	    Define this if you use Spring Bean APIs (org.springframework.beans.*)
+	--&gt;
+	&lt;dependency&gt;
+	  &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+	  &lt;artifactId&gt;spring-beans&lt;/artifactId&gt;
+	  &lt;version&gt;${org.springframework.version}&lt;/version&gt;
+	&lt;/dependency&gt;
+	&lt;!--
+	    Application Context (depends on spring-core, spring-expression, spring-aop, spring-beans)
+	    This is the central artifact for Spring's Dependency Injection Container and is generally always defined
+	--&gt;
+	&lt;dependency&gt;
+	  &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+	  &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+	  &lt;version&gt;${org.springframework.version}&lt;/version&gt;
+	&lt;/dependency&gt;
+	&lt;!--
+	    Aspect Oriented Programming (AOP) Framework (depends on spring-core, spring-beans)
+	    Define this if you use Spring AOP APIs (org.springframework.aop.*)
+	--&gt;
+	&lt;dependency&gt;
+	  &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+	  &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;
+	  &lt;version&gt;${org.springframework.version}&lt;/version&gt;
+	&lt;/dependency&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;org.aspectj&lt;/groupId&gt;
+		&lt;artifactId&gt;aspectjtools&lt;/artifactId&gt;
+		&lt;version&gt;1.6.2&lt;/version&gt;
+	&lt;/dependency&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;cglib&lt;/groupId&gt;
+		&lt;artifactId&gt;cglib&lt;/artifactId&gt;
+		&lt;version&gt;3.1&lt;/version&gt;
+	&lt;/dependency&gt;
+            
+	&lt;!--
+	    Transaction Management Abstraction (depends on spring-core, spring-beans, spring-aop, spring-context)
+	    Define this if you use Spring Transactions or DAO Exception Hierarchy
+	    (org.springframework.transaction.*/org.springframework.dao.*)
+	--&gt;
+	&lt;dependency&gt;
+	  &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+	  &lt;artifactId&gt;spring-tx&lt;/artifactId&gt;
+	  &lt;version&gt;${org.springframework.version}&lt;/version&gt;
+	&lt;/dependency&gt;
+	&lt;!--
+	    JDBC Data Access Library (depends on spring-core, spring-beans, spring-context, spring-tx)
+	    Define this if you use Spring's JdbcTemplate API (org.springframework.jdbc.*)
+	--&gt;
+	&lt;dependency&gt;
+	  &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+	  &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;
+	  &lt;version&gt;${org.springframework.version}&lt;/version&gt;
+	&lt;/dependency&gt;
+	 
+	&lt;!--
+	    Object-to-Relation-Mapping (ORM) integration with Hibernate, JPA, and iBatis.
+	    (depends on spring-core, spring-beans, spring-context, spring-tx)
+	    Define this if you need ORM (org.springframework.orm.*)
+	--&gt;
+	&lt;dependency&gt;
+	  &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+	  &lt;artifactId&gt;spring-orm&lt;/artifactId&gt;
+	  &lt;version&gt;${org.springframework.version}&lt;/version&gt;
+	&lt;/dependency&gt;
+	
+	&lt;dependency&gt;  
+       &lt;groupId&gt;log4j&lt;/groupId&gt;  
+       &lt;artifactId&gt;log4j&lt;/artifactId&gt;  
+       &lt;version&gt;1.2.15&lt;/version&gt;  
+       &lt;exclusions&gt;  
+         &lt;exclusion&gt;  
+           &lt;groupId&gt;javax.mail&lt;/groupId&gt;  
+           &lt;artifactId&gt;mail&lt;/artifactId&gt;  
+         &lt;/exclusion&gt;  
+         &lt;exclusion&gt;  
+           &lt;groupId&gt;javax.jms&lt;/groupId&gt;  
+           &lt;artifactId&gt;jms&lt;/artifactId&gt;  
+         &lt;/exclusion&gt;  
+         &lt;exclusion&gt;  
+           &lt;groupId&gt;com.sun.jdmk&lt;/groupId&gt;  
+           &lt;artifactId&gt;jmxtools&lt;/artifactId&gt;  
+         &lt;/exclusion&gt;  
+         &lt;exclusion&gt;  
+           &lt;groupId&gt;com.sun.jmx&lt;/groupId&gt;  
+           &lt;artifactId&gt;jmxri&lt;/artifactId&gt;  
+         &lt;/exclusion&gt;  
+       &lt;/exclusions&gt;  
+       &lt;scope&gt;runtime&lt;/scope&gt;  
+     &lt;/dependency&gt;  
+     
+     &lt;dependency&gt;
+		&lt;groupId&gt;org.hibernate&lt;/groupId&gt;
+		&lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;
+		&lt;version&gt;3.6.3.Final&lt;/version&gt;
+	&lt;/dependency&gt;
+
+	&lt;dependency&gt;
+		&lt;groupId&gt;javassist&lt;/groupId&gt;
+		&lt;artifactId&gt;javassist&lt;/artifactId&gt;
+		&lt;version&gt;3.12.1.GA&lt;/version&gt;
+	&lt;/dependency&gt;
+ 
+ 	&lt;dependency&gt;
+		&lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+		&lt;artifactId&gt;jstl&lt;/artifactId&gt;
+		&lt;version&gt;1.2&lt;/version&gt;
+		&lt;scope&gt;runtime&lt;/scope&gt;
+	&lt;/dependency&gt;
+	
+	&lt;dependency&gt;
+		&lt;groupId&gt;taglibs&lt;/groupId&gt;
+		&lt;artifactId&gt;standard&lt;/artifactId&gt;
+		&lt;version&gt;1.1.2&lt;/version&gt;
+		&lt;scope&gt;runtime&lt;/scope&gt;
+	&lt;/dependency&gt;
+	
+	&lt;dependency&gt;
+	  &lt;groupId&gt;commons-dbcp&lt;/groupId&gt;
+	  &lt;artifactId&gt;commons-dbcp&lt;/artifactId&gt;
+	  &lt;version&gt;1.4&lt;/version&gt;
+	&lt;/dependency&gt;
+        
+   &lt;dependency&gt;
+	    &lt;groupId&gt;mysql&lt;/groupId&gt;
+	    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+	    &lt;version&gt;5.1.9&lt;/version&gt;
+	&lt;/dependency&gt;
+    
+  &lt;/dependencies&gt;
+  &lt;build&gt;
+    &lt;finalName&gt;Spring3Struts2HibernateIntegration&lt;/finalName&gt;
+    &lt;plugins&gt;
+		&lt;plugin&gt;
+			&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+			&lt;version&gt;2.3.2&lt;/version&gt;
+			&lt;configuration&gt;
+				&lt;source&gt;1.6&lt;/source&gt;
+				&lt;target&gt;1.6&lt;/target&gt;
+			&lt;/configuration&gt;
+		&lt;/plugin&gt;
+	&lt;/plugins&gt;
+  &lt;/build&gt;
+&lt;/project&gt;
+
+</pre><p><a name="Download_Sourcecode"></a></p><h3>7) Download Sourcecode</h3><p>Download sourcecode of above example or go for .war file.</p><div class="noticeboxesde downgreennoticebox"><br /> <a href="https://drive.google.com/file/d/0B7yo2HclmjI4S2c5YldiNk44aVE/edit?usp=sharing" title="spring + struts + hibernate tutorial source code link">Download Source Code</a><br /></div><div class="noticeboxesde downgreennoticebox"><br /> <a href="https://drive.google.com/file/d/0B7yo2HclmjI4T2NrS19iRU5Hb3c/edit?usp=sharing" title="spring + struts + hibernate tutorial .war file link">Download .war File</a><br /></div><p>That&#8217;s all for this <strong>spring 4 + struts 2 + hibernate integration</strong> tutorial. Let me know of your thoughts and queries.</p><p><strong>Happy Learning !!</strong></p><div class="helpful "><div class="helpful-header"><h3 class="helpful-headline">Was this post helpful?</h3></div><div class="helpful-content" role="alert"> <span>Let us know if you liked the post. That’s the only way we can improve.</span></div><div class="helpful-controls"><div> <button class="helpful-pro helpful-button" type="button" data-value="pro" data-post="3879" data-instance="1450" role="button"> Yes </button></div><div> <button class="helpful-contra helpful-button" type="button" data-value="contra" data-post="3879" data-instance="1450" role="button"> No </button></div></div></div><div class='yarpp yarpp-related yarpp-related-website yarpp-template-list'><h3>Related Posts:</h3><ol><li><a href="../struts-2-hello-world-example-application/index.html" rel="bookmark" title="Struts 2 Hello World Example">Struts 2 Hello World Example </a></li><li><a href="../struts-2-hello-world-with-annotations/index.html" rel="bookmark" title="Struts 2 Hello World Annotations Example">Struts 2 Hello World Annotations Example </a></li><li><a href="../solved-unable-to-find-a-result-type-for-extension-properties-or-xml/index.html" rel="bookmark" title="[SOLVED]: Unable to find a result type for extension [properties] or [xml]">[SOLVED]: Unable to find a result type for extension [properties] or [xml] </a></li><li><a href="../how-to-correctly-set-result-path-in-struts-2/index.html" rel="bookmark" title="Struts 2 &#8211; How to Correctly Set Result Path">Struts 2 &#8211; How to Correctly Set Result Path </a></li><li><a href="../struts-2-custom-interceptor-with-interceptorref-example/index.html" rel="bookmark" title="Struts 2 custom interceptor with @InterceptorRef example">Struts 2 custom interceptor with @InterceptorRef example </a></li><li><a href="../solved-unable-to-find-interceptor-class-referenced-by-ref-name/index.html" rel="bookmark" title="[Solved] Unable to find interceptor class referenced by ref-name">[Solved] Unable to find interceptor class referenced by ref-name </a></li></ol></div></div><div class="pub-ad" style="margin-top: 40px; margin-bottom: 40px; text-align: center;"><div id="bsa-zone_1572302701062-4_123456"></div></div></div></article><div class="gb-container gb-container-457dd8fc"><div class="gb-inside-container"><h3 id="h-join-7000-awesome-developers-like-you" style="font-size:23px;font-style:normal;font-weight:700">Join 7000+ awesome developers, like you!</h3><div style="padding:0" class="wp-block-tnp-minimal"><p></p><div><div class="tnp tnp-subscription"><form method="post" action="https://howtodoinjava.com/?na=s"> <input type="hidden" name="nlang" value=""><div class="tnp-field tnp-field-email"><label for="tnp-1">Email</label> <input class="tnp-email" type="email" name="ne" id="tnp-1" value="" required></div><div class="tnp-field tnp-field-checkbox tnp-field-list"><label for="nl3"><input type="checkbox" id="nl3" name="nl[]" value="1" checked>&nbsp;Newsletter</label></div><div class="tnp-field tnp-field-checkbox tnp-field-list"><label for="nl4"><input type="checkbox" id="nl4" name="nl[]" value="2" checked>&nbsp;New Post Notification</label></div><div class="tnp-field tnp-privacy-field"><label><input type="checkbox" name="ny" required class="tnp-privacy">&nbsp;<a target="_blank" href="../../privacy-policy/index.html">By subscribing, I accept the privacy rules of this site.</a></label></div><div class="tnp-field tnp-field-button"><input class="tnp-submit" type="submit" value="Subscribe" ></div></form></div></div></div></div></div><div class="comments-area"><div class="pub-ad" style="margin-top: 40px; margin-bottom: 40px; text-align: center;"><div id="bsa-zone_1572302650478-4_123456"></div></div><div id="comments"><h3 class="comments-title">20 thoughts on &ldquo;Spring 4 + Struts 2 + Hibernate Integration Tutorial&rdquo;</h3><ol class="comment-list"><li id="comment-27876" class="comment even thread-even depth-1"><article class="comment-body" id="div-comment-27876"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn">Learner</cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-27876"> <time datetime="2018-05-20T10:53:00+05:30" itemprop="datePublished"> May 20, 2018 at 10:53 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>Hi lokesh,</p><p>Can you please provide simple architecture diagram of above tutorial. Actually i faced this question in an interview. I am not able to answer the question. It will be very useful for others as well.</p><p>Please help!!</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-27876' data-commentid="27876" data-postid="3879" data-belowelement="div-comment-27876" data-respondelement="respond" data-replyto="Reply to Learner" aria-label='Reply to Learner'>Reply</a></span></div></article></li><li id="comment-18697" class="comment odd alt thread-odd thread-alt depth-1"><article class="comment-body" id="div-comment-18697"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn">Binh Thanh Nguyen</cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-18697"> <time datetime="2015-10-17T02:23:11+05:30" itemprop="datePublished"> October 17, 2015 at 2:23 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>Thanks, nice post</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-18697' data-commentid="18697" data-postid="3879" data-belowelement="div-comment-18697" data-respondelement="respond" data-replyto="Reply to Binh Thanh Nguyen" aria-label='Reply to Binh Thanh Nguyen'>Reply</a></span></div></article></li><li id="comment-14022" class="comment even thread-even depth-1"><article class="comment-body" id="div-comment-14022"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn">sidhanath</cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-14022"> <time datetime="2014-12-17T01:34:42+05:30" itemprop="datePublished"> December 17, 2014 at 1:34 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p> org.slf4j<br /> slf4j-api<br /> 1.7.2</p><p> org.slf4j<br /> slf4j-log4j12<br /> 1.7.2</p><p>Add this dependency in the pom and remove the old one. In the DB connection properties use the default username and password. after this changes it work  it work for me.</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-14022' data-commentid="14022" data-postid="3879" data-belowelement="div-comment-14022" data-respondelement="respond" data-replyto="Reply to sidhanath" aria-label='Reply to sidhanath'>Reply</a></span></div></article></li><li id="comment-13607" class="comment odd alt thread-odd thread-alt depth-1 parent"><article class="comment-body" id="div-comment-13607"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn">dilhar</cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-13607"> <time datetime="2014-11-17T05:38:00+05:30" itemprop="datePublished"> November 17, 2014 at 5:38 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>hi..im getting this error when I do maven install</p><p><strong>Failed to execute goal on project struts-setup: Could not resolve dependencies for project com.dilhara:struts-setup:war:0.0.1-SNAPSHOT: Could not find artifact com.sun:tools:jar:1.5.0 at specified path /usr/lib/jvm/java-6-openjdk-i386/jre/../lib/tools.jar -&gt; [Help 1]</strong></p><p>and I updated pom like bellow</p><p><code><br /> com.sun<br /> tools<br /> 1.5.0<br /> </code></p><p>but same error is given</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-13607' data-commentid="13607" data-postid="3879" data-belowelement="div-comment-13607" data-respondelement="respond" data-replyto="Reply to dilhar" aria-label='Reply to dilhar'>Reply</a></span></div></article><ul class="children"><li id="comment-13608" class="comment byuser comment-author-lokeshgupta1981 bypostauthor even depth-2"><article class="comment-body" id="div-comment-13608"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn"><a href='../../index.html' rel='external nofollow ugc' class='url'>Lokesh Gupta</a></cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-13608"> <time datetime="2014-11-17T06:27:05+05:30" itemprop="datePublished"> November 17, 2014 at 6:27 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>Are you running this in eclipse? If the answer is yes, this is an annoying and very misunderstood problem. Try this <strong><a href="https://stackoverflow.com/questions/5756299/maven-3-artifact-problem/5756446#5756446" title="so thread" target="_blank" rel="nofollow noopener noreferrer ugc">solution</a></strong>.</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-13608' data-commentid="13608" data-postid="3879" data-belowelement="div-comment-13608" data-respondelement="respond" data-replyto="Reply to Lokesh Gupta" aria-label='Reply to Lokesh Gupta'>Reply</a></span></div></article></li></ul></li><li id="comment-9565" class="comment odd alt thread-even depth-1"><article class="comment-body" id="div-comment-9565"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn">dilhar</cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-9565"> <time datetime="2014-09-27T07:25:16+05:30" itemprop="datePublished"> September 27, 2014 at 7:25 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>Error occurred during deployment: Exception while loading the app : java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.student.dao.EmployeeDaoImpl] for bean with name &#8217;employeeDAO&#8217; defined in class path resource [beans.xml]; nested exception is java.lang.ClassNotFoundException: com.student.dao.EmployeeDaoImpl. Please see server.log for more details.</p><p>help me</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-9565' data-commentid="9565" data-postid="3879" data-belowelement="div-comment-9565" data-respondelement="respond" data-replyto="Reply to dilhar" aria-label='Reply to dilhar'>Reply</a></span></div></article></li><li id="comment-9564" class="comment even thread-odd thread-alt depth-1 parent"><article class="comment-body" id="div-comment-9564"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn">dilhar</cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-9564"> <time datetime="2014-09-27T07:23:27+05:30" itemprop="datePublished"> September 27, 2014 at 7:23 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>when I deploy your war it deployed successfully</p><p>but after change of package names glassfish give this error</p><p><a href="https://imgur.com/5nGw5rl" rel="nofollow"></a></p><p>how can i fix it</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-9564' data-commentid="9564" data-postid="3879" data-belowelement="div-comment-9564" data-respondelement="respond" data-replyto="Reply to dilhar" aria-label='Reply to dilhar'>Reply</a></span></div></article><ul class="children"><li id="comment-9601" class="comment byuser comment-author-lokeshgupta1981 bypostauthor odd alt depth-2"><article class="comment-body" id="div-comment-9601"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn"><a href='../../index.html' rel='external nofollow ugc' class='url'>Lokesh Gupta</a></cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-9601"> <time datetime="2014-09-27T16:42:31+05:30" itemprop="datePublished"> September 27, 2014 at 4:42 pm </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>You need to change the bean path is &#8220;beans.xml&#8221; file.</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-9601' data-commentid="9601" data-postid="3879" data-belowelement="div-comment-9601" data-respondelement="respond" data-replyto="Reply to Lokesh Gupta" aria-label='Reply to Lokesh Gupta'>Reply</a></span></div></article></li></ul></li><li id="comment-7872" class="comment even thread-even depth-1 parent"><article class="comment-body" id="div-comment-7872"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn">Raffaele</cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-7872"> <time datetime="2014-09-04T12:20:01+05:30" itemprop="datePublished"> September 4, 2014 at 12:20 pm </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>Thanks for this tutorial, infortunately I&#8217;m having following exception when I go to my only one url in my test webapp born from this tutorial:</p><p>GRAVE: Servlet.service() for servlet [jsp] in context with path [/mylastbag] threw exception<br /> org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [javax.persistence.EntityManagerFactory] is defined<br /> at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:319)<br /> at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:985)<br /> at org.springframework.orm.jpa.EntityManagerFactoryUtils.findEntityManagerFactory(EntityManagerFactoryUtils.java:142)<br /> at org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.lookupEntityManagerFactory(OpenEntityManagerInViewFilter.java:226)<br /> at org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.lookupEntityManagerFactory(OpenEntityManagerInViewFilter.java:202)<br /> at org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter.doFilterInternal(OpenEntityManagerInViewFilter.java:147)<br /> at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:108)<br /> at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)<br /> at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)<br /> at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)<br /> at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)<br /> at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)<br /> at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)<br /> at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)<br /> at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)<br /> at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)<br /> at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)<br /> at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)<br /> at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)<br /> at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)<br /> at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)<br /> at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)<br /> at java.lang.Thread.run(Thread.java:662)</p><p>What could be? Thanks in advance<br /> Raffaele</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-7872' data-commentid="7872" data-postid="3879" data-belowelement="div-comment-7872" data-respondelement="respond" data-replyto="Reply to Raffaele" aria-label='Reply to Raffaele'>Reply</a></span></div></article><ul class="children"><li id="comment-7876" class="comment byuser comment-author-lokeshgupta1981 bypostauthor odd alt depth-2"><article class="comment-body" id="div-comment-7876"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn"><a href='../../index.html' rel='external nofollow ugc' class='url'>Lokesh Gupta</a></cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-7876"> <time datetime="2014-09-04T13:30:10+05:30" itemprop="datePublished"> September 4, 2014 at 1:30 pm </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>May be application startup is not able to find the spring config at all.</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-7876' data-commentid="7876" data-postid="3879" data-belowelement="div-comment-7876" data-respondelement="respond" data-replyto="Reply to Lokesh Gupta" aria-label='Reply to Lokesh Gupta'>Reply</a></span></div></article></li></ul></li><li id="comment-6330" class="comment even thread-odd thread-alt depth-1 parent"><article class="comment-body" id="div-comment-6330"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn">Mark</cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-6330"> <time datetime="2014-08-05T10:08:34+05:30" itemprop="datePublished"> August 5, 2014 at 10:08 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>This is an awesome tutorial. Thanks for posting it.<br /> I successfully managed to run the codes in Eclipse. Now, I&#8217;m facing a problem creating the unit tests. I don&#8217;t know how to inject the session factory for the DAO unit tests. It&#8217;s always null. Do you have tutorial on how to do the unit tests? Thanks.</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-6330' data-commentid="6330" data-postid="3879" data-belowelement="div-comment-6330" data-respondelement="respond" data-replyto="Reply to Mark" aria-label='Reply to Mark'>Reply</a></span></div></article><ul class="children"><li id="comment-6339" class="comment byuser comment-author-lokeshgupta1981 bypostauthor odd alt depth-2 parent"><article class="comment-body" id="div-comment-6339"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn"><a href='../../index.html' rel='external nofollow ugc' class='url'>Lokesh Gupta</a></cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-6339"> <time datetime="2014-08-05T11:45:19+05:30" itemprop="datePublished"> August 5, 2014 at 11:45 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>I hope you are using @RunWith annotation along with @ContextConfiguration. If you are still facing the error then please provide the sample unit testcase you have written.</p><p>@RunWith(SpringJUnit4ClassRunner.class)<br /> @ContextConfiguration( locations = { &#8220;classpath:zzz-context.xml&#8221; })</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-6339' data-commentid="6339" data-postid="3879" data-belowelement="div-comment-6339" data-respondelement="respond" data-replyto="Reply to Lokesh Gupta" aria-label='Reply to Lokesh Gupta'>Reply</a></span></div></article><ul class="children"><li id="comment-7740" class="comment even depth-3"><article class="comment-body" id="div-comment-7740"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn">Mark</cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-7740"> <time datetime="2014-09-02T08:10:03+05:30" itemprop="datePublished"> September 2, 2014 at 8:10 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>Hi Lokesh, thanks for answering my question.</p><p>I have just added @RunWith &amp; @ContextConfiguration, but I encounter another issue.</p><p>15:58:34,669 ERROR TestContextManager:334 &#8211; Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7555b920] to prepare test instance [service.UserServiceTest@4152d38d]<br /> java.lang.IllegalStateException: Failed to load ApplicationContext<br /> at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)<br /> at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)<br /> &#8230;<br /> Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private dao.impl.GenericDAOImpl service.impl.GenericServiceImpl.daoClass; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type [dao.impl.GenericDAOImpl] is defined: expected single matching bean but found 33: genericDAO,profileDAO,profileRoleMapDAO,roleDAO,rolePermissionMapDAO,templateDAO,userDAO<br /> at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)<br /> at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)<br /> at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)<br /> &#8230; 41 more<br /> Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type [dao.impl.GenericDAOImpl] is defined: expected single matching bean but found 33: genericDAO,profileDAO,profileRoleMapDAO,roleDAO,rolePermissionMapDAO,templateDAO,userDAO<br /> at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:970)<br /> at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)</p><p>Here is my unit test.</p><p>BaseTest.java<br /> @RunWith(SpringJUnit4ClassRunner.class)<br /> @ContextConfiguration(locations = {&#8220;classpath:beans.xml&#8221;})<br /> public class BaseTest {<br /> }</p><p>UserServiceTest.java<br /> public class UserServiceTest extends BaseTest {</p><p> @Autowired<br /> private UserService userService;</p><p> @Before<br /> public void setUp() {<br /> System.out.println(&#8220;Before&#8221;);<br /> userService = new UserServiceImpl();<br /> }</p><p> @Test<br /> public void testAdd () {<br /> User user = new User();<br /> user.setEmail(&#8220;email&#8221;);<br /> user.setFirstName(&#8220;firstName&#8221;);<br /> user.setLastName(&#8220;lastName&#8221;);<br /> user.setPassword(&#8220;password&#8221;);<br /> userService.create(user);<br /> }</p><p>}</p><p>Hope you can help. Thanks.</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-7740' data-commentid="7740" data-postid="3879" data-belowelement="div-comment-7740" data-respondelement="respond" data-replyto="Reply to Mark" aria-label='Reply to Mark'>Reply</a></span></div></article></li></ul></li></ul></li><li id="comment-3368" class="comment odd alt thread-even depth-1 parent"><article class="comment-body" id="div-comment-3368"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn">Johannes</cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-3368"> <time datetime="2014-05-14T06:26:02+05:30" itemprop="datePublished"> May 14, 2014 at 6:26 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>Thank you for the nice tutorial, but why you are referencing old Struts1 tag libs the your web.xml? Also you should better use the  tags provided by struts instead of  from the jstl taglib. With the Struts tags you can use OGNL.</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-3368' data-commentid="3368" data-postid="3879" data-belowelement="div-comment-3368" data-respondelement="respond" data-replyto="Reply to Johannes" aria-label='Reply to Johannes'>Reply</a></span></div></article><ul class="children"><li id="comment-3370" class="comment byuser comment-author-lokeshgupta1981 bypostauthor even depth-2 parent"><article class="comment-body" id="div-comment-3370"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn"><a href='../../index.html' rel='external nofollow ugc' class='url'>Lokesh Gupta</a></cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-3370"> <time datetime="2014-05-14T07:16:51+05:30" itemprop="datePublished"> May 14, 2014 at 7:16 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>I must have missed but is there anything like struts2 taglibs?? OR I am not getting your question. Regarding using tags, I have used JSTL as well as struts tag just to adjust them in application so that they can be part of it. Many of us will get benefit from it.</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-3370' data-commentid="3370" data-postid="3879" data-belowelement="div-comment-3370" data-respondelement="respond" data-replyto="Reply to Lokesh Gupta" aria-label='Reply to Lokesh Gupta'>Reply</a></span></div></article><ul class="children"><li id="comment-3371" class="comment odd alt depth-3 parent"><article class="comment-body" id="div-comment-3371"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn">Johannes</cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-3371"> <time datetime="2014-05-14T08:09:21+05:30" itemprop="datePublished"> May 14, 2014 at 8:09 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>Of course there exists a struts2 taglib. You are using the struts2 taglib for your form control. But you don&#8217;t need to define it in your web.xml anymore.</p><p><a href="https://cwiki.apache.org/confluence/display/WW/Tag+Reference" rel="nofollow ugc">https://cwiki.apache.org/confluence/display/WW/Tag+Reference</a></p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-3371' data-commentid="3371" data-postid="3879" data-belowelement="div-comment-3371" data-respondelement="respond" data-replyto="Reply to Johannes" aria-label='Reply to Johannes'>Reply</a></span></div></article><ul class="children"><li id="comment-3372" class="comment byuser comment-author-lokeshgupta1981 bypostauthor even depth-4"><article class="comment-body" id="div-comment-3372"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn"><a href='../../index.html' rel='external nofollow ugc' class='url'>Lokesh Gupta</a></cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-3372"> <time datetime="2014-05-14T08:14:04+05:30" itemprop="datePublished"> May 14, 2014 at 8:14 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>Thanks. Yes we can drop declarations from web.xml. I used it s:form without knowing it is from struts 2. Thanks for pointing out.</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-3372' data-commentid="3372" data-postid="3879" data-belowelement="div-comment-3372" data-respondelement="respond" data-replyto="Reply to Lokesh Gupta" aria-label='Reply to Lokesh Gupta'>Reply</a></span></div></article></li></ul></li></ul></li></ul></li><li id="comment-3367" class="comment odd alt thread-odd thread-alt depth-1 parent"><article class="comment-body" id="div-comment-3367"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn">Adarsh S</cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-3367"> <time datetime="2014-05-14T05:47:33+05:30" itemprop="datePublished"> May 14, 2014 at 5:47 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>Hi ,<br /> I have a question, This may be General but i want to know this.</p><p>Assume that,I have struts2 project and it integrated with hibernate and using Maven. i want migrate into<br /> Pure SpringMVC- hibernate. Before migrate into Spring what are the prerequisite steps i need to follow<br /> in terms of Live project ?</p><p>Thanks,<br /> Adarsha.</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-3367' data-commentid="3367" data-postid="3879" data-belowelement="div-comment-3367" data-respondelement="respond" data-replyto="Reply to Adarsh S" aria-label='Reply to Adarsh S'>Reply</a></span></div></article><ul class="children"><li id="comment-3369" class="comment byuser comment-author-lokeshgupta1981 bypostauthor even depth-2"><article class="comment-body" id="div-comment-3369"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn"><a href='../../index.html' rel='external nofollow ugc' class='url'>Lokesh Gupta</a></cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-3369"> <time datetime="2014-05-14T07:07:38+05:30" itemprop="datePublished"> May 14, 2014 at 7:07 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>Adarsh, this is really a very good question. I do not have any concrete suggestion at this time and I will try to put my thoughts in this blog separately. For the sake of answering, I can only say If I have been doing it actually then first step would have been to try to divide all such struts things which spring support directly or indirectly /and which does not support by any mean.<br /> First take down the items which spring support and then do the hard job. Idea is simple, most of things should be achievable by changing config files.</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-3369' data-commentid="3369" data-postid="3879" data-belowelement="div-comment-3369" data-respondelement="respond" data-replyto="Reply to Lokesh Gupta" aria-label='Reply to Lokesh Gupta'>Reply</a></span></div></article></li></ul></li><li id="comment-3366" class="comment odd alt thread-even depth-1"><article class="comment-body" id="div-comment-3366"  itemtype="https://schema.org/Comment" itemscope><footer class="comment-meta" aria-label="Comment meta"><div class="comment-author-info"><div class="comment-author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope> <cite itemprop="name" class="fn">Adarsh S</cite></div><div class="entry-meta comment-metadata"> <a href="index.html#comment-3366"> <time datetime="2014-05-14T05:05:06+05:30" itemprop="datePublished"> May 14, 2014 at 5:05 am </time> </a></div></div></footer><div class="comment-content" itemprop="text"><p>Thank You very Much for this Post.I think if you add &#8220;Web Service Tutorial&#8221; like this  it would be great !</p> <span class="reply"><a rel='nofollow' class='comment-reply-link' href='#comment-3366' data-commentid="3366" data-postid="3879" data-belowelement="div-comment-3366" data-respondelement="respond" data-replyto="Reply to Adarsh S" aria-label='Reply to Adarsh S'>Reply</a></span></div></article></li></ol><div id="respond" class="comment-respond"><h3 id="reply-title" class="comment-reply-title">Leave a Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://howtodoinjava.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-form-comment"><label for="comment" class="screen-reader-text">Comment</label><textarea id="comment" name="comment" cols="45" rows="8" required></textarea></p><label for="author" class="screen-reader-text">Name</label><input placeholder="Name *" id="author" name="author" type="text" value="" size="30" required /> <label for="email" class="screen-reader-text">Email</label><input placeholder="Email *" id="email" name="email" type="email" value="" size="30" required /> <label for="url" class="screen-reader-text">Website</label><input placeholder="Website" id="url" name="url" type="url" value="" size="30" /><div class='tnp-comments'><label for="tnp-comments-checkbox"><input type="checkbox" value="1" name="newsletter" id="tnp-comments-checkbox">&nbsp;Subscribe to the newsletter and updates!</label></div><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='3879' id='comment_post_ID' /> <input type='hidden' name='comment_parent' id='comment_parent' value='0' /></p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="70fdb4b755" /></p><p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="161"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form></div></div></div></main></div><div class="widget-area sidebar is-right-sidebar" id="right-sidebar"><div class="inside-right-sidebar"><aside id="search-3" class="widget inner-padding widget_search"><form method="get" class="search-form" action="https://howtodoinjava.com/"> <label> <span class="screen-reader-text">Search for:</span> <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:"> </label> <button class="search-submit" aria-label="Search"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path fill-rule="evenodd" clip-rule="evenodd" d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" /></svg></span></button></form></aside><aside id="text-2" class="widget inner-padding widget_text"><div class="textwidget"><div class="sticky-ad-parent"><div class="pub-ad" style="margin-top: 10px; margin-bottom: 6px; display: inline-block;"></p><div id="bsa-zone_1572302500073-4_123456"></div></div></div></div></aside><aside id="text-3" class="widget inner-padding widget_text"><div class="textwidget"><div class="sticky-ad-parent"><div class="pub-ad" style="margin-top: 10px; margin-bottom: 6px; display: inline-block;"></p><div id="bsa-zone_1572302561355-9_123456"></div></div></div></div></aside><aside id="text-5" class="widget inner-padding widget_text"><div class="textwidget"><div class="sticky-ad-parent"><div class="pub-ad" style="margin-top: 10px; margin-bottom: 6px; display: inline-block;"></p><div id="bsa-zone_1573665857798-3_123456"></div></div></div></div></aside><aside id="text-4" class="widget inner-padding widget_text"><div class="textwidget"><div class="sticky-ad-parent"><div class="pub-ad" style="margin-top: 10px; margin-bottom: 6px; display: inline-block;"></p><div id="bsa-zone_1637267103340-7_123456"></div><div style="margin-top: 40px;"></p><div id="bsa-zone_1573665929866-9_123456"></div></div></div></div></div></aside></div></div></div></div><div class="gb-container gb-container-eae04a8a"><div class="gb-inside-container"><div class="gb-container gb-container-316523a3 has-white-color has-text-color"><div class="gb-inside-container"><div class="gb-grid-wrapper gb-grid-wrapper-318cf2fb"><div class="gb-grid-column gb-grid-column-78b2dd5f"><div class="gb-container gb-container-78b2dd5f"><div class="gb-inside-container"><h4 class="has-white-color has-text-color" id="howtodoinjava">About <em>HowToDoInJava</em></h4><p class="gb-headline gb-headline-85d96079 gb-headline-text">This blog provides tutorials and how-to guides on Java and related technologies.</p><p class="gb-headline gb-headline-352bb617 gb-headline-text">It also shares the best practices, algorithms &amp; solutions, and frequently asked interview questions.</p></div></div></div><div class="gb-grid-column gb-grid-column-df65bf0c"><div class="gb-container gb-container-df65bf0c"><div class="gb-inside-container"><h4 class="gb-headline gb-headline-08dc97b8 gb-headline-text">Good Reads</h4><p class="gb-headline gb-headline-132d82a1"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span><span class="gb-headline-text"><a rel="nofollow" href="../../about/index.html"></a><a href="../../resources/10-life-lessons-i-have-learned-in-last-few-years/index.html" data-type="post" data-id="3654">10 Life Lessons</a></span></p><p class="gb-headline gb-headline-a96b558d"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span><span class="gb-headline-text"><a href="../../resources/best-way-to-learn-java/index.html" data-type="post" data-id="4050">Best Way to Learn Java</a></span></p><p class="gb-headline gb-headline-93b347de"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span><span class="gb-headline-text"><a href="../../tomcat/a-birds-eye-view-on-how-web-servers-work/index.html" data-type="post" data-id="3158">How do Web Servers Work?</a></span></p><p class="gb-headline gb-headline-f114d735"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span><span class="gb-headline-text"><a href="../../java/io/how-java-io-works-internally/index.html" data-type="post" data-id="4371">How does Java I/O Works?</a></span></p><p class="gb-headline gb-headline-483ca863"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span><span class="gb-headline-text"><a href="../../java/java-security/how-to-generate-secure-password-hash-md5-sha-pbkdf2-bcrypt-examples/index.html" data-type="post" data-id="2768">Secure Hash Algorithms</a></span></p><p class="gb-headline gb-headline-fa4344d5"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span><span class="gb-headline-text"><a href="../../series/index.html">Tutorials Series</a></span></p></div></div></div><div class="gb-grid-column gb-grid-column-f311805d"><div class="gb-container gb-container-f311805d"><div class="gb-inside-container"><h4 class="gb-headline gb-headline-6c239a9a gb-headline-text">Meta Links</h4><p class="gb-headline gb-headline-58999d83"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span><span class="gb-headline-text"><a rel="nofollow" href="../../about/index.html">About Us</a></span></p><p class="gb-headline gb-headline-2cf41338"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span><span class="gb-headline-text"><a href="../../advertise/index.html" rel="nofollow">Advertise</a></span></p><p class="gb-headline gb-headline-f25f67e7"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span><span class="gb-headline-text"><a rel="nofollow" href="../../contact/index.html">Contact Us</a></span></p><p class="gb-headline gb-headline-41f14ec9"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span><span class="gb-headline-text"><a rel="nofollow" href="../../privacy-policy/index.html">Privacy Policy</a></span></p><p class="gb-headline gb-headline-81526d85"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span><span class="gb-headline-text"><a rel="nofollow" href="../../guest-and-sponsored-posts/index.html">Guest Posts</a></span></p><p class="gb-headline gb-headline-e83392f1"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span><span class="gb-headline-text"><a href="../../newsletter-archives/index.html" target="_blank" rel="noreferrer noopener">Newsletter Archive</a></span></p></div></div></div><div class="gb-grid-column gb-grid-column-284f4c2e"><div class="gb-container gb-container-284f4c2e"><div class="gb-inside-container"><h4 class="gb-headline gb-headline-89ceafb7 gb-headline-text">Our Blogs</h4><p class="gb-headline gb-headline-f4101a78"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M192 384h192c53 0 96-43 96-96h32c70.6 0 128-57.4 128-128S582.6 32 512 32H120c-13.3 0-24 10.7-24 24v232c0 53 43 96 96 96zM512 96c35.3 0 64 28.7 64 64s-28.7 64-64 64h-32V96h32zm47.7 384H48.3c-47.6 0-61-64-36-64h583.3c25 0 11.8 64-35.9 64z"></path></svg></span><span class="gb-headline-text"><a rel="noreferrer noopener" href="http://restfulapi.net/" target="_blank">REST API Tutorial</a></span></p><div class="gb-button-wrapper gb-button-wrapper-217a1ef3"> <a class="gb-button gb-button-41a5f175" href="https://facebook.com/howtodoinjava/"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></span></a> <a class="gb-button gb-button-8950af57" href="https://twitter.com/howtodoinjava"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></span></a> <a class="gb-button gb-button-908c5463" href="mailto:howtodoinjava@gmail.com"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path></svg></span></a></div></div></div></div></div></div></div></div></div><p></p><div class="site-footer"><footer class="site-info" aria-label="Site"  itemtype="https://schema.org/WPFooter" itemscope><div class="inside-site-info grid-container"><div class="copyright-bar"> Copyright © 2022 · Hosted on <a href="https://www.cloudways.com/en/?id=1061800" target="_blank" rel="noindex nofollow">Cloudways</a> · <a href="../../sitemap_index.xml">Sitemap</a></div></div></footer></div> <a title="Scroll back to top" aria-label="Scroll back to top" rel="nofollow" href="#" class="generate-back-to-top" style="opacity:0;visibility:hidden;" data-scroll-speed="400" data-start-scroll="300"> <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span> </a> <script defer type="text/javascript" src="../../../cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script><script type="text/javascript">jQuery(document).ready(function(e){e("#commentform").validate({rules:{author:{required:!0,minlength:2},email:{required:!0,email:!0},comment:{required:!0,minlength:10}},messages:{author:"Please enter your name",email:"Please enter a valid email addres",comment:"Please enter minimum 10 characters"},errorElement:"div",errorPlacement:function(e,r){r.after(e)}})});</script> <script id="generate-a11y">!function(){"use strict";if("querySelector"in document&&"addEventListener"in window){var e=document.body;e.addEventListener("mousedown",function(){e.classList.add("using-mouse")}),e.addEventListener("keydown",function(){e.classList.remove("using-mouse")})}}();</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-D9LVPL7ZCK"></script> <script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D9LVPL7ZCK');</script> <script type="text/javascript">(function(){
+		var bsa_optimize=document.createElement('script');
+		bsa_optimize.type='text/javascript';
+		bsa_optimize.async=true;
+		bsa_optimize.src='../../../cdn4.buysellads.net/pub/howtodoinjavad41d.js?'+(new Date()-new Date()%600000);
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa_optimize);
+	})();</script> <noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js'></script><script src='../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js' id='syntaxhighlighter-core-js'></script> <script src='../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js' id='syntaxhighlighter-brush-xml-js'></script> <script src='../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js' id='syntaxhighlighter-brush-java-js'></script> <script src='../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js' id='syntaxhighlighter-brush-sql-js'></script> <script type='text/javascript'>(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore09b1.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.head.appendChild( corecss );
+		var themecssurl = "../../wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeEclipse09b1.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.head.appendChild( themecss );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['auto-links'] = false;
+	SyntaxHighlighter.defaults['gutter'] = false;
+	SyntaxHighlighter.defaults['light'] = true;
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['tab-size'] = 2;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.defaults['quick-code'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}</script> <link rel='stylesheet' id='yarppRelatedCss-css'  href='../../wp-content/cache/autoptimize/css/autoptimize_single_825acc65c7a3728f76a5b39cdc177e6f.css' media='all' /> <script defer src='../../wp-content/plugins/gp-premium/menu-plus/functions/js/sticky.min.js' id='generate-sticky-js'></script> <script id='helpful-js-extra'>var helpful = {"ajax_url":"https:\/\/howtodoinjava.com\/wp-admin\/admin-ajax.php","ajax_data":{"user_id":"484cdeb66ff000e8e7195d75b2607bff","_wpnonce":"9c1510b202"},"translations":{"fieldIsRequired":"This field is required."},"user_voted":{"user_id":"484cdeb66ff000e8e7195d75b2607bff","post_id":3879,"action":"helpful_has_user_voted","_wpnonce":"cacb3d0d3b"},"post_id":"3879","ajax_session":{"helpful_user":"484cdeb66ff000e8e7195d75b2607bff"}};</script> <script defer src='../../wp-content/cache/autoptimize/js/autoptimize_single_719120848a0c049b44c88a1a7bc23c4b.js' id='helpful-js'></script> <!--[if lte IE 11]> <script src='https://howtodoinjava.com/wp-content/themes/generatepress/assets/js/classList.min.js' id='generate-classlist-js'></script> <![endif]--> <script id='generate-menu-js-extra'>var generatepressMenu = {"toggleOpenedSubMenus":"1","openSubMenuLabel":"Open Sub-Menu","closeSubMenuLabel":"Close Sub-Menu"};</script> <script defer src='../../wp-content/themes/generatepress/assets/js/menu.min.js' id='generate-menu-js'></script> <script id='generate-back-to-top-js-extra'>var generatepressBackToTop = {"smooth":"1"};</script> <script defer src='../../wp-content/themes/generatepress/assets/js/back-to-top.min.js' id='generate-back-to-top-js'></script> <script defer src='../../wp-includes/js/comment-reply.min.js' id='comment-reply-js'></script> <script id='q2w3_fixed_widget-js-extra'>var q2w3_sidebar_options = [{"sidebar":"sidebar-1","use_sticky_position":false,"margin_top":60,"margin_bottom":20,"stop_elements_selectors":".gb-container-eae04a8a","screen_max_width":1025,"screen_max_height":0,"widgets":["#text-4"]}];</script> <script defer src='../../wp-content/plugins/q2w3-fixed-widget/js/frontend.min.js' id='q2w3_fixed_widget-js'></script> <script defer src='../../wp-content/cache/autoptimize/js/autoptimize_single_ecdbaefe5ac7324f3709c2c40d34052d.js' id='the_js-js'></script> <script defer src='../../wp-content/cache/autoptimize/js/autoptimize_single_91d3419c22ca3aaf16e35a34f620b967.js' id='akismet-frontend-js'></script> <script>(function(){var js = "window['__CF$cv$params']={r:'731d89ecfc0b85f6',m:'cvE5_jTy22TFaCycNhZ5hXLQAHBQ02aAIwZSv8vJCVs-1659010510-0-Ae0lf4X0Dn+oprwjpYf6GAley1I8QuIMMrq07qTZpMLU85FpDmXvJAeUhyoqZEUy0I6dPMHbEojVu/PatxPoS1bPpX1w4co9rNLk0aLkHitVDEtAm+D2gNf1U6u3RalEg6xxMB/28foO7TqDjYmpcAbdb8AdKwSnPVVvLv/DMJhXFRbsN7OLWAIPvc/9QX+bDQ==',s:[0x496d73af57,0x9276b63283],u:'/cdn-cgi/challenge-platform/h/b'};var _cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../cdn-cgi/challenge-platform/h/b/scripts/cb/invisible6351.js?cb=731d89ecfc0b85f6',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+<!-- Mirrored from howtodoinjava.com/struts2/spring-4-struts-2-hibernate-integration-tutorial/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Jul 2022 12:29:53 GMT -->
+</html>

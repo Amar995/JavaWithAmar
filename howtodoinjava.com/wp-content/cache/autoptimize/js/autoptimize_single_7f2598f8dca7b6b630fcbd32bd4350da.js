@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){jQuery(document).ready(function(){UAGBTableOfContents._run({"mappingHeaders":[true,true,false,false,true,true],"scrollToTop":false},'.uagb-block-0af581e5');});})

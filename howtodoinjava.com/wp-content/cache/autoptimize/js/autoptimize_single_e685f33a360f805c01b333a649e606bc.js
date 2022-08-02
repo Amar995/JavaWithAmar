@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){jQuery(document).ready(function(){UAGBTableOfContents._run({"mappingHeaders":[false,true,false,false,false,false],"scrollToTop":false},'.uagb-block-02fb96e1');});jQuery(document).ready(function(){UAGBInlineNotice._run({"c_id":null,"cookies":false,"close_cookie_days":1,"noticeDismiss":""},'.uagb-block-2d04feeb');});})

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from howtodoinjava.com/wp-content/downloads/maskingDemo.html? by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Jul 2022 12:57:37 GMT -->
+<body>
+
+<h2>JavaScript - Mask Sensitive Information Demo</h2>
+
+<p>Input JSON payload in left box and press submit button. Masked data will appear on right box.</p>
+
+<table>
+	<tr>
+		<th>Unmasked Data</th>
+		<th>Masked Data</th>
+	</tr>
+	<tr>
+		<td><textarea id="unmasked" rows="10" cols="30">{ "name":"Lokesh", "accountNumber":"3044444444", "city":"New York"}</textarea></td>
+		<td><textarea id="masked" rows="10" cols="30"></textarea></td>
+	</tr>
+	<tr><td colspan="2"><input type="button" name="submit" value="Submit" onclick="submit()"></td></tr>
+</table>
+
+<script>
+
+	function submit() {
+		var unmaskedData = JSON.parse(document.getElementById("unmasked").value);
+
+		var maskedData = JSON.stringify(unmaskedData, maskInfo, ' ');
+
+		document.getElementById("masked").value = maskedData;
+	}
+
+	function maskInfo(key, value) 
+	{
+		//Default value is same as original
+		var maskedValue = value;
+
+		if (key == "accountNumber") 
+		{
+			if(value && value.length > 5) {
+				maskedValue = "*" + maskedValue.substring(value.length - 4, value.length);
+			} else {
+				maskedValue = "****"; 
+			}
+		}
+		return maskedValue;
+	}
+
+</script>
+
+<script>(function(){var js = "window['__CF$cv$params']={r:'731dba1d4ea12e33',m:'HBK3BpR2TGZhFAhJmM8wX7v6RDUVl8m5DFtQJAQ6ncA-1659012484-0-AQ1ZCAtULBYqPXoCqlVkaX04hXLTcDHCB2bzdfbN+eAYj17yfAQB0efbv3vv0o7cS8ZEbfYE/Y1x8rlKKeS+nkCYxmWAEiLcjIJrJpB/o0CL3/4o2tRWvBJCnHosGjuV5p2cxoiqoskqSijLX/jqVdjPxT13h6csan+id1jr4bb2',s:[0x725631e5b3,0x07e0d398d7],u:'/cdn-cgi/challenge-platform/h/b'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../cdn-cgi/challenge-platform/h/b/scripts/alpha/invisible5615.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+<!-- Mirrored from howtodoinjava.com/wp-content/downloads/maskingDemo.html? by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Jul 2022 12:57:37 GMT -->
+</html>

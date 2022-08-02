@@ -1,0 +1,37 @@
+<html>
+
+<!-- Mirrored from howtodoinjava.com/wp-content/uploads/keypress_keydown_demo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Jul 2022 12:57:38 GMT -->
+<head>
+<script type="text/javascript" src="../../../code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$( document ).ready(function(){
+
+	$('#textbox').keydown(function(event){
+		var keycode = (event.keyCode ? event.keyCode : event.which);
+		$('#keydownCode').html(keycode);
+	});
+	 
+	$('#textbox').keypress(function(event){
+		var keycode = (event.keyCode ? event.keyCode : event.which);
+		$('#keypressCode').html(keycode);
+	});
+
+});
+</script>
+</head>
+<body>
+	<h4>jQuery keydown() and keypress() difference</h4>
+	
+	<label>TextBox : </label><input id="textbox" type="text" size="50" />
+	
+	<div>
+		<label>keydown() detected keycode : </label><span id="keydownCode">0</span>.
+	</div>
+	
+	<div>
+		<label>keypress() detected keycode : </label><span id="keypressCode">0</span>.
+	</div>
+<script>(function(){var js = "window['__CF$cv$params']={r:'731dba53a8a785ae',m:'gQEyDzA2N4n6yyfpgDAAd5Z6bGVwTZqvVqjGMbdkl.E-1659012493-0-AXLMApFgdGTZoDSTYMJWj+DMvFpa4xGx5Ns0nX2QQMe7atM1B3OcTBXSfxIYqyP9Lx939P2lSujfwCztNgtMtBpEZfLEe+qnoXfq2vqhLgGxN0+tDQXu79f9JZAKLNsk7XRf6ekvxdTvb/25cvoBVn0vFF8Mdi9+Khi6igH0GmPP',s:[0x5faef71218,0x8c924940eb],u:'/cdn-cgi/challenge-platform/h/b'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../cdn-cgi/challenge-platform/h/b/scripts/alpha/invisible5615.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+<!-- Mirrored from howtodoinjava.com/wp-content/uploads/keypress_keydown_demo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Jul 2022 12:57:38 GMT -->
+</html>

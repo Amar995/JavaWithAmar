@@ -1,0 +1,62 @@
+<HTML>
+	
+<!-- Mirrored from howtodoinjava.com/wp-content/uploads/2014/01/jquery-cloning.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Jul 2022 12:57:38 GMT -->
+<HEAD>
+		<TITLE> jQuery Cloning Example </TITLE>
+		<script src="../../../../../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<SCRIPT LANGUAGE="JAVASCRIPT">
+		var User = function(fname,lname){
+			this.fname = fname,
+			this.lname = lname,
+			this.getFName = function(){
+				return this.fname;
+			},
+			this.getLName = function(){
+				return this.lname;
+			}
+		};
+		User.prototype.getUserName = function() {
+			return (this.getFName() + " " + this.getLName());
+		}
+		function cloneDemo(){
+			//Craete the object
+			var user = new User($("#fname").val(),$("#lname").val());
+			//Check the original object values
+			$("#origUser").html(user.getUserName());
+			//Cloning is done here
+			var cloned = $.extend({}, user);
+			//Change the firstname property
+			user.fname = 'Noname';
+			//Let's check the original and cloned object again
+			$("#origAfterUser").html(user.getUserName());
+			//Verify cloned is same as original in starting
+			$("#clonedUser").html(cloned.getUserName());
+		}
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<h3>jQuery Cloning Example</h3>
+		To clone an object, you can directly use clone() method.
+		<p>
+			First Name : <input type='text' id='fname'/>
+		</p>
+		<p>
+			Last Name : <input type='text' id='lname'/>
+		</p>
+		<p>
+			<input type='button' value='Create above User and Clone it' onclick="cloneDemo();"/>
+		</p>
+		<p>I have changed the first name of orginal Object to 'Noname'</p>
+		<p>
+			Original User : <span id='origUser'></span>
+		</p>
+		<p>
+			After Cloning Original User : <span id='origAfterUser'></span>
+		</p>
+		<p>
+			Cloned User Still is : <span id='clonedUser'></span>
+		</p>
+	<script>(function(){var js = "window['__CF$cv$params']={r:'731dba5c6f6c2e33',m:'Z4JPXGQe7.K5s7Guyedf5fp46JKT50_c8hSblE29T6Y-1659012495-0-AdgsrpsrIS6x05kqYNIVs+sljvVBuMaUee+n3uAnptdr7br0hC0SZuHiFQoFN1Od1lM/75S/Vbkr8n+pfUpO0dy+Rq4pdHGQwjlj/7ZRX79wce3x3XdjS96ZUvmSRUH8JIOXGuBUvkT0jdDtm4tpsZ0BwKwdTLd8w9R8BcdQi7Ev',s:[0x22fb5272cb,0x2e1349e97e],u:'/cdn-cgi/challenge-platform/h/b'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../../../cdn-cgi/challenge-platform/h/b/scripts/alpha/invisible5615.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></BODY>
+
+<!-- Mirrored from howtodoinjava.com/wp-content/uploads/2014/01/jquery-cloning.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Jul 2022 12:57:38 GMT -->
+</HTML>

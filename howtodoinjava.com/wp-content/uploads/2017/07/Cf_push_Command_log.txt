@@ -1,0 +1,95 @@
+
+F:\Study\Technical Writings\Cloud Foundry\spring-helloworld-cf>cf push spring-helloworld-cf -p target\spring-helloworld-cf-0.0.1-SNAPSHOT.jar
+Creating app spring-helloworld-cf in org sajal.chakraborty / space development as sajal.chakraborty@gmail.com...
+OK
+
+Creating route spring-helloworld-cf.cfapps.io...
+OK
+
+Binding spring-helloworld-cf.cfapps.io to spring-helloworld-cf...
+OK
+
+Uploading spring-helloworld-cf...
+Uploading app files from: C:\Users\Sajal\AppData\Local\Temp\unzipped-app355765639
+Uploading 345.8K, 92 files
+Done uploading
+OK
+
+Starting app spring-helloworld-cf in org sajal.chakraborty / space development as sajal.chakraborty@gmail.com...
+Downloading java_buildpack...
+Downloading ruby_buildpack...
+Downloading binary_buildpack...
+Downloading staticfile_buildpack...
+Downloading nodejs_buildpack...
+Downloaded ruby_buildpack
+Downloading python_buildpack...
+Downloading php_buildpack...
+Downloading go_buildpack...
+Downloaded nodejs_buildpack
+Downloaded java_buildpack
+Downloaded binary_buildpack
+Downloading dotnet_core_buildpack...
+Downloaded python_buildpack
+Downloading dotnet_core_buildpack_beta...
+Downloaded php_buildpack
+Downloaded dotnet_core_buildpack
+Downloaded staticfile_buildpack
+Downloaded dotnet_core_buildpack_beta
+Downloaded go_buildpack
+Creating container
+Successfully created container
+Downloading app package...
+Downloaded app package (14.1M)
+-----> Java Buildpack Version: v3.18 (offline) | https://github.com/cloudfoundry/java-buildpack.git#841ecb2
+-----> Downloading Open Jdk JRE 1.8.0_131 from https://java-buildpack.cloudfoundry.org/openjdk/trusty/x86_64/openjdk-1.8.0_131.tar.gz (found in cache)
+       Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre (1.1s)
+-----> Downloading Open JDK Like Memory Calculator 2.0.2_RELEASE from https://java-buildpack.cloudfoundry.org/memory-calculator/trusty/x86_64/memory-ca
+lculator-2.0.2_RELEASE.tar.gz (found in cache)
+       Memory Settings: -Xmx681574K -XX:MaxMetaspaceSize=104857K -Xss349K -Xms681574K -XX:MetaspaceSize=104857K
+-----> Downloading Container Security Provider 1.5.0_RELEASE from https://java-buildpack.cloudfoundry.org/container-security-provider/container-securit
+y-provider-1.5.0_RELEASE.jar (found in cache)
+-----> Downloading Spring Auto Reconfiguration 1.11.0_RELEASE from https://java-buildpack.cloudfoundry.org/auto-reconfiguration/auto-reconfiguration-1.
+11.0_RELEASE.jar (found in cache)
+Exit status 0
+Uploading droplet, build artifacts cache...
+Uploading build artifacts cache...
+Uploading droplet...
+Uploaded build artifacts cache (108B)
+Uploaded droplet (59.7M)
+Uploading complete
+Destroying container
+Successfully destroyed container
+
+0 of 1 instances running, 1 starting
+1 of 1 instances running
+
+App started
+
+
+OK
+
+App spring-helloworld-cf was started using this command `CALCULATED_MEMORY=$($PWD/.java-buildpack/open_jdk_jre/bin/java-buildpack-memory-calculator-2.0
+.2_RELEASE -memorySizes=metaspace:64m..,stack:228k.. -memoryWeights=heap:65,metaspace:10,native:15,stack:10 -memoryInitials=heap:100%,metaspace:100% -s
+tackThreads=300 -totMemory=$MEMORY_LIMIT) && JAVA_OPTS="-Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.
+sh $CALCULATED_MEMORY -Djava.ext.dirs=$PWD/.java-buildpack/container_security_provider:$PWD/.java-buildpack/open_jdk_jre/lib/ext -Djava.security.proper
+ties=$PWD/.java-buildpack/security_providers/java.security" && SERVER_PORT=$PORT eval exec $PWD/.java-buildpack/open_jdk_jre/bin/java $JAVA_OPTS -cp $P
+WD/. org.springframework.boot.loader.JarLauncher`
+
+Showing health and status for app spring-helloworld-cf in org sajal.chakraborty / space development as sajal.chakraborty@gmail.com...
+OK
+
+requested state: started
+instances: 1/1
+usage: 1G x 1 instances
+urls: spring-helloworld-cf.cfapps.io
+last uploaded: Sun Jul 9 06:43:33 UTC 2017
+stack: cflinuxfs2
+buildpack: container-security-provider=1.5.0_RELEASE java-buildpack=v3.18-offline-https://github.com/cloudfoundry/java-buildpack.git#841ecb2 java-main
+open-jdk-like-jre=1.8.0_131 open-jdk-like-memory-calculator=2.0.2_RELEASE open-jdk-like-security-providers secur...
+
+     state     since                    cpu    memory         disk         details
+#0   running   2017-07-09 12:14:24 PM   0.8%   394.6M of 1G   138M of 1G
+
+F:\Study\Technical Writings\Cloud Foundry\spring-helloworld-cf>
+
+
